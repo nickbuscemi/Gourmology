@@ -1,0 +1,36 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+  @layer base {
+    * {
+      @apply box-border list-none p-0 m-0 scroll-smooth;
+    }
+    
+    body {
+      @apply  text-white min-h-screen bg-dark-2;
+    }
+    }
+
+
+
+/* Topbar */
+.topbar {
+  @apply bg-transparent sticky z-50 w-full h-[200px];
+}
+
+/* SideNavBar */
+.sidebar {
+  @apply bg-transparent sticky z-50 w-full h-[100px];
+}
+
+
+/* Hero */
+
+.video1::-webkit-media-controls-start-playback-button {
+  diplay: none 
+}
+
