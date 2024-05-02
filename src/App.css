@@ -11,7 +11,7 @@
     }
     
     body {
-      @apply  text-white min-h-screen bg-dark-2;
+      @apply  text-white min-h-screen bg-dark-1;
     }
     }
 

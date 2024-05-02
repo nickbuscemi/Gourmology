@@ -23,7 +23,7 @@ const RootLayout = () => {
     <div className="flex flex-col min-h-screen w-full md:flex">
         {isMobile ? <SideNavBar /> : <TopNavbar />}
 
-        <section className="flex flex-1 w-full">
+        <section className="flex flex-col w-full">
             <Outlet />
         </section>
         <Footer />

@@ -7,6 +7,7 @@ import RootLayout from './_root/RootLayout';
 import { Home } from './_root';
 import { Services, Contact, Menus } from '../src/_root/index';
 import Book from './_root/pages/Book';
+import CateringMenu from './_root/pages/Menus/CateringMenu';
 
 
 function App() {
@@ -22,7 +23,9 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/menus" element={<Menus />} />
+                <Route path='/menus/catering-menu' element={<CateringMenu />} />
                 <Route path="/book" element={<Book />} />
+                <Route path="*" element={<div>404 Not Found</div>} />
             </Route>
       </Routes>
     </main>

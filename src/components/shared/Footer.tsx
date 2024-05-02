@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
-    <footer className="bg-dark-1 text-center text-white">
+    <footer className="bg-dark-2 text-center text-white">
         <div className="container px-6 pt-6 mx-auto">
             {/* Social media icons container */}
             
@@ -26,7 +26,7 @@ const Footer = () => {
                     />
                   </div>
                     <div className="gird-cols-1 grid items-center justify-center gap-4 md:grid-cols-3 mb-6">
-                        <div className="md:mb-6 md:ml-auto">
+                        <div className="md:mb-6 md:ml-auto pb-2 lg:pb-0 text-cream1 tracking-widest font-garamond">
                             <p>
                                 <strong>Sign up for our newsletter</strong>
                             </p>
@@ -34,65 +34,57 @@ const Footer = () => {
 
                         {/* Newsletter sign-up input field */}
                         <div className="relative md:mb-6">
-                            <Input />
+                            <Input placeholder="enter your email"/>
                         </div>
 
                         {/* Newsletter sign-up submit button */}
-                        <div className="mb-6 md:mr-auto">
-                          <Button variant="outline">Subscribe</Button>
+                        <div className="mb-6 md:mr-auto font-garamond pt-2 md:pt-0">
+                          <Button variant="outline" className="bg-cream1 tracking-widest items-center justify-center text-dark-2 rounded-sm">Subscribe</Button>
                         </div>
                     </div>
                 </form>
             </div>
 
-            {/* Additional content here... */}
-             {/* <!-- Copyright information --> */}
-                <div className="mb-6">
-                    
-                      
-                </div>
-
-                {/* <!-- Links section --> */}
-                <div className="flex items-center justify-center">
-                    <div className="mb-4">
-                      <ul className="custom-list flex gap-6">
-                        <li>
-                          <a href="#" className="text-white block cursor-pointer">Contact</a>  
-                        </li>
-                        <li>
-                          <a href="#" className="text-white block cursor-pointer">Lynbrook, NY</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
+          
                 {/* <!-- Social media icons --> */}
                 <div className="mt-8 mb-8 gap-12 flex justify-center">
                     <Link to='https://www.instagram.com/gourm.ology/' >
                     <span>
-                      <img src={instagram} alt="Instagram" className="w-8 h-8 cursor-pointer" />
+                      <img src={instagram} alt="Instagram" className="w-6 h-6 cursor-pointer" />
                     </span>
                     </Link>
                     <span>
-                      <img src={email} alt="Email" className="w-8 h-8 cursor-pointer" />
+                      <img src={email} alt="Email" className="w-6 h-6 cursor-pointer" />
                     </span>
                     <span>
                       <a href="tel:+13474537738">
-                        <img src={phone} alt="Phone" className="w-8 h-8 cursor-pointer" />
+                        <img src={phone} alt="Phone" className="w-6 h-6 cursor-pointer" />
                       </a>
                     </span>
                     <Link to='https://www.facebook.com/Gourmology/'>
                     <span>
-                      <img src={facebook} alt="Facebook" className="w-8 h-8 cursor-pointer" />
+                      <img src={facebook} alt="Facebook" className="w-6 h-6 cursor-pointer" />
                     </span>
                     </Link>
                 </div>
 
             </div>
+            <div className="flex items-center justify-center">
+                    <div className="mb-0">
+                      <ul className="custom-list flex gap-6">
+                        {/*<li>
+                          <a href="#" className=" text-cream1 tracking-widest font-garamond block cursor-pointer">Contact</a>  
+  </li>*/}
+                        <li>
+                          <a href="#" className=" text-cream1 tracking-widest font-garamond block cursor-pointer">Lynbrook, NY</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
 
             {/* <!-- Copyright section --> */}
             <div
-                className="p-4 text-center bg-black bg-opacity-20">
+                className="pt-4 pb-8 text-center font-garamond text-cream1">
                 © 2024 Copyright: Gourmology, LLC
             </div>
     </footer>

@@ -26,13 +26,13 @@ const About2 = () => {
 
   return (
     <div>
-      <section id='about2' className="overflow-hidden pb-12 lg:pt-[120px] lg:pb-[90px] bg-dark-2">
+      <section id='about2' className="overflow-hidden pb-12 lg:pt-[120px] lg:pb-[90px] bg-dark-1">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-center -mx-4">
             
             {/* Text section now on the left */}
             <div className="w-full px-4">
-              <div className="mt-10 lg:mt-0 font-garamond tracking-widest">
+              <div className="font-garamond tracking-widest">
                 <h2 className="mb-5 text-3xl font-bold text-cream1 sm:text-[40px]/[48px]">
                   All-inclusive Experience.
                 </h2>
