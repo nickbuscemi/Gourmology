@@ -6,9 +6,13 @@ import About3 from '@/components/sections/About3';
 import About4 from '@/components/sections/About4';
 import Instagram from '@/components/sections/Instagram';
 
+
 export default function Home() {
+  
+
   return (
     <div className='flex flex-col w-full'>
+      
       <Hero2 />
       <About3 />
       <About4 />
@@ -16,6 +20,7 @@ export default function Home() {
       <About2 />
       <Instagram />
       <Testimonials />
+      
     </div>
   );
 }

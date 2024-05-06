@@ -89,7 +89,7 @@ const About2 = () => {
                     <Carousel>
                         <CarouselContent>
                             <CarouselItem>
-                              <div className="flex w-full px-3 sm:px-4 gap-28" style={{ maxHeight: '560px' }}>
+                              <div className="flex w-full px-3 sm:px-4 gap-28" style={{ maxHeight: '600px' }}>
                                 <div className="w-full py-3 sm:py-4">
                                     <img
                                         src={paella}

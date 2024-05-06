@@ -1,8 +1,11 @@
+import Hero from "@/components/shared/Hero";
+import { ServiceGrid } from "@/components/sections/ServiceGrid";
 
-const Services = () => {
+export default function Services() {
   return (
-    <div>Services</div>
-  )
+    <>
+    <Hero />
+    <ServiceGrid />
+    </>
+  );
 }
-
-export default Services

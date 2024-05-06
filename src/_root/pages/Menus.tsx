@@ -3,12 +3,14 @@ import CateringMenu from "./Menus/CateringMenu"
 import HolidayMenu from "./Menus/HolidayMenu"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import useScrollTrigger from "@/hooks/useScrollTrigger"
 
 const Menus = () => {
 
   const [isActive, setIsActive] = useState('catering');
   const triggerClass = 'md:text-xl font-bold text-white';
   const tabsContentClass = 'text-center mx-8 pt-6 md:pt-4';
+  const isLoaded = useScrollTrigger();
 
   const holiday = 'Mother\'s Day' 
 
@@ -20,7 +22,7 @@ const Menus = () => {
           Our Menus
         </h2>
       </div>
-      <div className="flex flex-col pt-8">
+      <div className="flex flex-col pt-8 animate__animated animate__fadeIn animate__slower">
         <Tabs defaultValue={isActive} onValueChange={setIsActive} className="font-garamond tracking-widest text-cream1 text-2xl">
           <TabsList>
             <TabsTrigger value="catering" onClick={() => setIsActive('catering')} className={isActive === 'catering' ? triggerClass : ''}>Catering</TabsTrigger>
@@ -46,7 +48,7 @@ const Menus = () => {
 
           <TabsContent value="weeklyspecials">
             <p className={tabsContentClass}>
-               Save time and eat better with our meal prep services.
+               Check out our specials this week!
             </p>
             <h3 className="text-center text-5xl pt-20">Coming Soon...</h3>
           </TabsContent>

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-
 import instagram from '../../../public/assets/icons/instagram.svg'
 import facebook from '../../../public/assets/icons/facebook.svg'
 import email from '../../../public/assets/icons/email.svg'
@@ -13,8 +12,25 @@ import '../../App.css'
 
 export default function Hero2() {
   const videoRef = useRef<HTMLVideoElement>(null); // Create a ref object for the video
-
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [opacity, setOpacity] = useState(1); // Initially fully visible
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const maxScroll = window.innerHeight; // Maximum scroll value before the hero fades away completely
+      const currentScroll = window.scrollY; // Current scroll position
+      const newOpacity = 1 - currentScroll / maxScroll;
+      setOpacity(Math.max(0, newOpacity)); // Ensure opacity doesn't go below 0
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
 
   useEffect(() => {
     const handleResize = () => {
@@ -61,13 +77,15 @@ export default function Hero2() {
   return (
     <>
       {/* Hero */}
-      <div className="hero-container py-24 lg:py-3" 
+      <div 
+      className="hero-container py-24 lg:py-3"
         style={{ 
             backgroundSize: 'cover', 
             backgroundPosition: 'center', 
             width: '100%',
             height: '86.5vh', 
             overflow: 'hidden',
+            opacity: opacity, 
         }}>
           {isMobile ? (
             <img
@@ -108,16 +126,16 @@ export default function Hero2() {
             </video>
           )}
         {/* End Gradients */}
-        <div className="relative z-10">
+        <div className="relative z-10 animate__animated animate__fadeIn animate__slower">
           <div className="container py-6 lg:py-44">
             <div className="max-w-3xl text-center mx-auto">
               {/* Title */}
               <div className="mt-0 max-w-7xl pb-4 md:pb-10">
                 <h1 className="font-garamond text-cream1 font-normal italic tracking-widest scroll-m-20 text-l md:text-xl lg:text-2xl">
-                  Long Island / New York City
+                  Long Island & New York City
                 </h1>
               </div>
-              <div className="mt-4 pb-2 md:pb-3">
+              <div className="mt-4 pb-2 md:pb-3 animate__animated animate__fadeIn animate__slower animate__delay-1s">
                 {/*<h1 className="font-['oswald'] font-[300] tracking-wide scroll-m-20 text-6xl md:text-7xl lg:text-9xl">
                   GOURMOLOGY
       </h1>*/}
