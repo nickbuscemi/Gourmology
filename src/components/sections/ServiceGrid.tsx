@@ -10,9 +10,9 @@ import {
 
 export const ServiceGrid = () => {
   return (
-    <div className="container py-24 lg:py-64 font-garamond text-cream1">
+    <div className="animate__animated animate__fadeInUp animate__slower container pt-32 pb-8 md:pt-56 md:pb-32 lg:pt-96 font-garamond tracking-widest text-cream1">
       <div className="max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-12">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-12">
           <div className="space-y-6 lg:space-y-10">
             <ServiceItem
               Icon={BrainCogIcon}

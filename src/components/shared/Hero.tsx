@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import video1 from '../../../public/videos/site-videos/video1.mp4'
-import video1gif from '../../../public/videos/site-videos/video1gif.gif'
+import video2 from '../../../public/videos/site-videos/video2.mp4'
 import '../../App.css'
 
 export default function Hero() {
@@ -61,6 +60,12 @@ export default function Hero() {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5; // Set the playback rate to 0.5, making the video play at half speed
+    }
+  }, []);
   
   return (
     <>
@@ -71,24 +76,33 @@ export default function Hero() {
             backgroundSize: 'cover', 
             backgroundPosition: 'center', 
             width: '100%',
-            height: '50%', 
+            height: '100%', 
             overflow: 'hidden',
             opacity: opacity, 
         }}>
           {isMobile ? (
-            <img
-              src={video1gif}
-              alt="Background"
-              style={{
-                position: 'absolute',
-                width: '100%',
-                height: '56%',
-                top: '0',
-                left: '0',
-                objectFit: 'cover',
-                zIndex: -10
-              }}
-            />
+            <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            ref={videoRef}
+            
+            style={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              top: '0%',
+              left: '50%',
+              transform: 'translate(-50%, -35%)',  // Centers the video exactly in the viewport
+              objectFit: 'cover',  // Ensures the video covers the full area without stretching
+              zIndex: -10  // Places the video under other content
+            }}
+            src={video2}  // Assuming hero1 is your video file path now
+            className='video1'
+          >
+            Your browser does not support the video tag.
+          </video>
         ) : (
             <video
               autoPlay
@@ -101,13 +115,13 @@ export default function Hero() {
                 position: 'absolute',
                 width: '100%',
                 height: '100%',
-                top: '5%',
+                top: '0%',
                 left: '50%',
-                transform: 'translate(-50%, -50%)',  // Centers the video exactly in the viewport
+                transform: 'translate(-50%, -35%)',  // Centers the video exactly in the viewport
                 objectFit: 'cover',  // Ensures the video covers the full area without stretching
                 zIndex: -10  // Places the video under other content
               }}
-              src={video1}  // Assuming hero1 is your video file path now
+              src={video2}  // Assuming hero1 is your video file path now
               className='video1'
             >
               Your browser does not support the video tag.
@@ -118,8 +132,8 @@ export default function Hero() {
           <div className="container py-6 lg:py-4">
             <div className="max-w-3xl text-center mx-auto">
               {/* Title */}
-              <div className="md:mt-24 max-w-7xl md:pb-10 mb-[-130px] md:mb-0">
-                <h3 className="font-garamond text-cream1 font-normal italic tracking-widest scroll-m-20 text-2xl md:text-3xl lg:text-4xl">
+              <div className="md:mt-4 lg:mt-24 max-w-7xl  md:mb-0">
+                <h3 className="font-garamond text-cream1 font-normal italic tracking-widest scroll-m-20 text-2xl md:text-4xl lg:text-4xl">
                   Bringing people together for life's special moments
                 </h3>
               </div>
