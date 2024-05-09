@@ -1,34 +1,17 @@
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-  } from "@/components/ui/carousel"
-  
-import paella from '../../../public/assets/images/site-images/foodImages/paella.png';
-import shrimp from '../../../public/assets/images/site-images/foodImages/shrimp.jpg';
-import { useState, useEffect } from 'react';
+
+//import { CarouselComp } from "../shared/CarouselComp";
+import useScrollTrigger from '@/hooks/useScrollTrigger';
 
 const About2 = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 640);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+  const [isVisibleText, textRef] = useScrollTrigger();
+ 
   return (
     <div>
-      <section id='about2' className="overflow-hidden pb-12 lg:pt-[120px] lg:pb-[90px] bg-dark-1">
+      <section id='about2' className="overflow-hidden pb-12 lg:pt-[120px] lg:pb-[190px] bg-dark-1">
         <div className="container mx-auto">
-          <div className="flex flex-wrap items-center justify-center -mx-4">
+          <div ref={textRef} className={`flex flex-wrap items-center justify-center -mx-4
+            ${isVisibleText ? 'animate__animated animate__fadeInUp animate__slower' : ''}`}>
             
             {/* Text section now on the left */}
             <div className="w-full px-4">
@@ -42,7 +25,7 @@ const About2 = () => {
                   We do not provide linen, so you have the liberty of choosing your 
                   preferred style.
                 </p>
-                <p className="mb-8 text-base text-body-color dark:text-dark-6">
+                <p className="mb-0 text-base text-body-color dark:text-dark-6">
                   After the meal, we will leave your kitchen clean, 
                   just how we found it.                
                 </p>
@@ -50,75 +33,9 @@ const About2 = () => {
             </div>
 
             {/* Images section now on the right */}
-            <div className="w-full  lg:w-full">
-                <div className="flex items-center -mx-3 sm:-mx-4">
-                    {isMobile ? (
-                    // Mobile view: Render only one image
-                    <Carousel>
-                        <CarouselContent>
-                            <CarouselItem>
-                                <div className="w-full px-3 sm:px-4">
-                                    <div className="aspect-square w-full overflow-hidden">  {/* Ensures the container is a square */}
-                                        <img
-                                            src={paella}
-                                            alt=""
-                                            className="w-full h-full object-cover rounded-sm"
-                                        />
-                                    </div>
-                                </div>
-                            </CarouselItem>
-                            <CarouselItem>
-                                <div className="w-full px-3 sm:px-4">
-                                    <div className="aspect-square w-full overflow-hidden">  {/* Ensures the container is a square */}
-                                        <img
-                                            src={shrimp}
-                                            alt=""
-                                            className="w-full h-full object-cover rounded-sm"
-                                        />
-                                    </div>
-                                </div>
-                            </CarouselItem>
-                        </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </Carousel>
-
-                    
-                    ) : (
-                    // Desktop view: Render all images side by side
-                    <Carousel>
-                        <CarouselContent>
-                            <CarouselItem>
-                              <div className="flex w-full px-3 sm:px-4 gap-28" style={{ maxHeight: '600px' }}>
-                                <div className="w-full py-3 sm:py-4">
-                                    <img
-                                        src={paella}
-                                        alt=""
-                                        className="w-full h-full object-cover rounded-sm"
-                                    />
-                                </div>
-                              </div>
-                            </CarouselItem>
-                            <CarouselItem>
-                              <div className="flex w-full px-3 sm:px-4 gap-28" style={{ maxHeight: '560px' }}>
-                                <div className="w-full py-3 sm:py-4">
-                                    <img
-                                        src={shrimp}
-                                        alt=""
-                                        className="w-full h-full object-cover rounded-sm"
-                                    />
-                                </div>
-                              </div>
-                            </CarouselItem>     
-                        </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </Carousel>
-
-                    
-                    )}
-                </div>
-            </div>
+            {/*<div className="w-full  lg:w-full md:pt-8">
+                <CarouselComp />
+  </div>*/}
 
 
           </div>

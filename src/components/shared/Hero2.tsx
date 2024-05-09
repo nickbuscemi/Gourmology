@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import instagram from '../../../public/assets/icons/instagram.svg'
+/*import instagram from '../../../public/assets/icons/instagram.svg'
 import facebook from '../../../public/assets/icons/facebook.svg'
 import email from '../../../public/assets/icons/email.svg'
-import phone from '../../../public/assets/icons/phone.svg'
+import phone from '../../../public/assets/icons/phone.svg'*/
 import logoWords from '../../../public/assets/images/logos/site-logo-words-white.png'
 import downIcon from '../../../public/assets/icons/downIcon.svg'
 import video1 from '../../../public/videos/site-videos/video1.mp4'
 import video1gif from '../../../public/videos/site-videos/video1gif.gif'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import '../../App.css'
 
 export default function Hero2() {
@@ -131,7 +131,7 @@ export default function Hero2() {
             <div className="max-w-3xl text-center mx-auto">
               {/* Title */}
               <div className="mt-0 max-w-7xl pb-4 md:pb-10">
-                <h1 className="font-garamond text-cream1 font-normal italic tracking-widest scroll-m-20 text-l md:text-xl lg:text-2xl">
+                <h1 className="font-garamond text-cream1 font-normal italic tracking-widest scroll-m-20 text-xl md:text-xl lg:text-2xl">
                   Long Island & New York City
                 </h1>
               </div>
@@ -148,12 +148,12 @@ export default function Hero2() {
               </div>
               {/* End Title */}
               <div className="mt-4 md:mt-8 max-w-3xl">
-                <p className="text-sm md:text-xl text-muted-foreground font-garamond tracking-widest ">
+                <p className="text-l md:text-xl text-muted-foreground font-garamond tracking-widest ">
                   Enjoy the taste of restaurant cuisine from the comfort of your own home or event space.
                 </p>
               </div>
               
-              <div className="mt-8 mb-8 gap-12 flex justify-center">
+              {/*<div className="mt-8 mb-8 gap-12 flex justify-center">
                 <Link to='https://www.instagram.com/gourm.ology/' >
                 <span>
                   <img src={instagram} alt="Instagram" className="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer" />
@@ -172,19 +172,19 @@ export default function Hero2() {
                   <img src={facebook} alt="Facebook" className="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer" />
                 </span>
                 </Link>
-              </div>
+    </div>*/}
               {/* End Buttons */}
             </div>
           </div>
-          <div className="absolute bottom lg:bottom-10 w-full text-center">
+          <div className="absolute -bottom-20 lg:bottom-10 w-full text-center -mb-32">
           <div className="cursor-pointer">
             <div className="scroll-down flex justify-center">
             <img 
                 src={downIcon} 
                 alt="Scroll down"
                 style={{
-                    height: '40px', // Set appropriate size
-                    width: '40px',  // Maintain aspect ratio
+                    height: '30px', // Set appropriate size
+                    width: '30px',  // Maintain aspect ratio
                 }}
                 onClick={scrollToAbout}
                 />

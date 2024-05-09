@@ -13,41 +13,42 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
+
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "In Home Private Events",
-    href: "/services/private-events",
+    title: "Private Chef Experience",
+    href: "/services/private-chef-experience",
     description:
       "We'll turn your home into a restaurant for the night.",
   },
   {
-    title: "Outside Catering",
-    href: "/services/outside-catering",
+    title: "Sit Down Dinners",
+    href: "/services/sit-down-dinners",
     description:
-      "Have a venue in mind? We'll bring the food to you.",
+      "Experience the elegance of fine dining with our sit down dinner services.",
   },
   {
-    title: "Holiday Packages",
-    href: "/services/holiday-packages",
+    title: "Servers, Bartenders, Grill Man",
+    href: "/services/servers-bartenders-grill-man",
     description:
-      "Celebrate your favorite holidays with our special holiday packages.",
+      "Elevate your event with our professional servers, bartenders, and grill experts.",
+  },
+  {
+    title: "Buffett Service and Delivery",
+    href: "/services/buffett-service-and-delivery",
+    description: "Delight your guests with our diverse buffet service options, perfect for any event size.",
+  },
+  {
+    title: "On Premise Cooking Stations",
+    href: "/services/on-premise-cooking-stations",
+    description:
+      "Watch as our chefs prepare your meals fresh on-site.",
   },
   {
     title: "Rentals",
     href: "/services/rentals",
-    description: "Rent fine cutlery, plates, chargers, chafers and more for your next event.",
-  },
-  {
-    title: "Mobile Bar",
-    href: "/services/mobile-bar",
     description:
-      "We'll bring the party to any event with our mobile bar service.",
-  },
-  {
-    title: "Meal Prep, Plates, and trays",
-    href: "/services/plates-trays",
-    description:
-      "Save time and eat better with our meal prep services.",
+      "From tableware to tents, we have all the rental items you need for your next event.",
   },
 ]
 

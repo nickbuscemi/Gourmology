@@ -94,7 +94,7 @@ export default function Hero() {
               height: '100%',
               top: '0%',
               left: '50%',
-              transform: 'translate(-50%, -35%)',  // Centers the video exactly in the viewport
+              transform: 'translate(-50%, -65%)',  // Centers the video exactly in the viewport
               objectFit: 'cover',  // Ensures the video covers the full area without stretching
               zIndex: -10  // Places the video under other content
             }}
@@ -114,7 +114,7 @@ export default function Hero() {
               style={{
                 position: 'absolute',
                 width: '100%',
-                height: '100%',
+                height: '90%',
                 top: '0%',
                 left: '50%',
                 transform: 'translate(-50%, -35%)',  // Centers the video exactly in the viewport
@@ -129,11 +129,12 @@ export default function Hero() {
           )}
         {/* End Gradients */}
         <div className="relative z-10 animate__animated animate__fadeIn animate__slower">
-          <div className="container py-6 lg:py-4">
+          <div className="container -my-20 lg:py-4 md:my-0">
             <div className="max-w-3xl text-center mx-auto">
               {/* Title */}
               <div className="md:mt-4 lg:mt-24 max-w-7xl  md:mb-0">
-                <h3 className="font-garamond text-cream1 font-normal italic tracking-widest scroll-m-20 text-2xl md:text-4xl lg:text-4xl">
+              
+                <h3 className="font-garamond text-cream1 font-normal  tracking-widest scroll-m-20 text-2xl md:text-4xl lg:text-4xl">
                   Bringing people together for life's special moments
                 </h3>
               </div>

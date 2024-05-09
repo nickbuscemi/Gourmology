@@ -59,7 +59,7 @@ export function NavigationMenuDemo2() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link to="/">
+                <Link to="/home">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Home
                   </NavigationMenuLink>
