@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/carousel";
 
 const CateringMenu = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex] = useState(0);
   const images = [CateringMenuImg1, CateringMenuImg2, CateringMenuImg3];
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 

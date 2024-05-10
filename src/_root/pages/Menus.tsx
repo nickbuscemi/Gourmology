@@ -3,14 +3,14 @@ import CateringMenu from "./Menus/CateringMenu"
 import HolidayMenu from "./Menus/HolidayMenu"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
-import useScrollTrigger from "@/hooks/useScrollTrigger"
+//import useScrollTrigger from "@/hooks/useScrollTrigger"
 
 const Menus = () => {
 
   const [isActive, setIsActive] = useState('catering');
   const triggerClass = 'md:text-xl font-bold text-white';
   const tabsContentClass = 'text-center mx-8 pt-6 md:pt-4';
-  const isLoaded = useScrollTrigger();
+  //const isLoaded = useScrollTrigger();
 
   const holiday = 'Mother\'s Day' 
 
