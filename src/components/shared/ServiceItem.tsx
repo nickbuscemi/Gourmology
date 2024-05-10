@@ -13,7 +13,9 @@ type ServiceItemProps = {
 export const ServiceItem: FC<ServiceItemProps> = ({ Icon, title, description }) => {
   const [hover, setHover] = useState(false);
 
-  const serviceName = title.toLowerCase().replace(/\s/g, '-');
+  const serviceName = title.toLowerCase().replace(/[\s,]+/g, '-');
+
+  
 
   const defaultStyle = {
     transition: 'background-color 0.3s ease, opacity 0.3s ease',

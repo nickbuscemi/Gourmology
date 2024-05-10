@@ -1,77 +1,54 @@
-
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-
-// Define your schema using Zod
-const formSchema = z.object({
-  name: z.string().min(1, { message: "Please enter your name" }),
-  email: z.string().email({ message: "Invalid email address" }),
-  eventDate: z.string().min(1, { message: "Please enter a date for your event" }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters long" })
-});
+"use client"
+import { ContactForm } from "../../components/forms/ContactForm"
+import instagram from '../../../public/assets/icons/instagram.svg'
+import facebook from '../../../public/assets/icons/facebook.svg'
+import { Link } from "react-router-dom"
 
 // Define the form component
-const ContactForm = () => {
-  const form = useForm({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      eventDate: '',
-      message: ''
-    }
-  });
-
-  const onSubmit = (values: any) => {
-    console.log(values);
-    // Here you would typically handle the form submission, like sending to an API.
-  };
+const Contact = () => {
 
   return (
-    <div className="w-full px-4 pb-24 pt-0 flex flex-col items-center justify-center">
+    <>
+    <div className="lg:px-40">
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 pb-20">
+      <div className="flex flex-col items-center justify-center">
       <div className="mt-10 lg:mt-0 font-garamond tracking-widest">
         <h2 className="mb-5 text-3xl text-center font-bold text-cream1 sm:text-[40px]/[48px]">
-          Start Planning Your Unforgettable Event Today!
+          Questions, Consultations, or Bookings?
         </h2>
         <p className="mb-5 text-base text-center text-body-color dark:text-dark-6">
-          Please use the form below to reach out to us and we will be in touch. We can't wait to hear from you!
+        Please reach out to us below and we will be in touch!
         </p>
-
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-            <input id="name" type="text" {...form.register("name")} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" />
-            <p className="mt-2 text-sm text-red-600">{form.formState.errors.name?.message}</p>
-          </div>
-
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-            <input id="email" type="email" {...form.register("email")} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" />
-            <p className="mt-2 text-sm text-red-600">{form.formState.errors.email?.message}</p>
-          </div>
-
-          <div>
-            <label htmlFor="eventDate" className="block text-sm font-medium text-gray-700">Event Date</label>
-            <input id="eventDate" type="text" {...form.register("eventDate")} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" />
-            <p className="mt-2 text-sm text-red-600">{form.formState.errors.eventDate?.message}</p>
-          </div>
-
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-            <textarea id="message" {...form.register("message")} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"></textarea>
-            <p className="mt-2 text-sm text-red-600">{form.formState.errors.message?.message}</p>
-          </div>
-
-          <div>
-            <button type="submit" className="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-              Submit
-            </button>
-          </div>
-        </form>
       </div>
+        <ContactForm />
+      </div>
+      <div className="flex items-center justify-center md:pt-0 pt-8">
+            <div className="font-garamond tracking-widest text-cream1">
+              <h3 className="md:text-4xl text-3xl font-semibold pb-4">Contact Information</h3>
+              <div className="space-y-3 md:text-2xl">
+                <a href="tel:+13474537738">
+                  <p><strong>Phone:</strong> (347) 453-7738</p>
+                </a>
+                <p><strong>Email:</strong> contact@example.com</p>
+                <p className="flex items-center">
+                    <span>Follow us on:</span>
+                    <div className="flex items-center ml-2 gap-4">
+                      <Link to="https://www.instagram.com/gourm.ology/" className="block">
+                        <img src={instagram} alt="Instagram" className="w-6 h-6 cursor-pointer" />
+                      </Link>
+                      <Link to="https://www.facebook.com/Gourmology/" className="block">
+                        <img src={facebook} alt="Facebook" className="w-6 h-6 cursor-pointer" />
+                      </Link>
+                    </div>
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-  );
+    </>
+  )
 };
 
-export default ContactForm
+export default Contact;

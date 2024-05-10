@@ -1,3 +1,5 @@
+import stock1 from '../../public/assets/images/site-images/stock1.jpeg'
+
 export const serviceData = [
     {
       title: "Private Chef Experience",
@@ -7,7 +9,7 @@ export const serviceData = [
           "Immerse yourself in a unique culinary adventure with our Private Chef Experience.",
           "Enjoy a personalized menu crafted to your preferences and dietary needs."
         ],
-        imageUrl: "path_to_private_chef_experience_image.jpg",
+        imageUrl: stock1,
         imageAlt: "An exquisite private dining setup",
         buttonLabel: "Reserve Your Chef"
       },
@@ -17,7 +19,7 @@ export const serviceData = [
           "Discover the art of fine dining with dishes crafted by our world-class chefs tailored specifically for you.",
           "Explore a new level of gourmet cuisine personalized to celebrate your special occasions."
         ],
-        imageUrl: "path_to_custom_culinary_creations_image.jpg",
+        imageUrl: stock1,
         imageAlt: "Customized gourmet dishes",
         buttonLabel: "Customize Menu"
       }
@@ -46,7 +48,7 @@ export const serviceData = [
       }
     },
     {
-      title: "Servers, Bartenders, Grill Man",
+      title: "Servers Bartenders Grill Man",
       content1: {
         title: "Professional Event Staffing",
         description: [

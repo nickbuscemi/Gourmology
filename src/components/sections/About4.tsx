@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button } from '../ui/button';
 //import { useState, useEffect } from 'react';
 import useScrollTrigger from '@/hooks/useScrollTrigger';
@@ -27,7 +28,9 @@ const About2 = () => {
                  will absolutely love, and all at a great rate you will love just as 
                  much.
                 </p>
-                <Button className='bg-cream1 text-dark-2 rounded-sm'>Services</Button>
+                <Button className='bg-cream1 text-dark-2 rounded-sm'>
+                  <Link to='/services'>Services</Link>
+                </Button>
               </div>
             </div>
 

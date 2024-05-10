@@ -1,5 +1,5 @@
 
-import { Button } from '../ui/button';
+//import { Button } from '../ui/button';
 import 'animate.css';
 import useScrollTrigger from '@/hooks/useScrollTrigger';
 
@@ -16,7 +16,7 @@ const ServiceContent2 = ({
     imageAlt,
     title,
     description,
-    buttonLabel
+    //buttonLabel
 }: ServiceContentProps) => {
     const [isVisibleText, textRef] = useScrollTrigger();
     const [isVisibleImage, imageRef] = useScrollTrigger();
@@ -53,7 +53,7 @@ const ServiceContent2 = ({
                                     {description}
                                 </p>
                                 <h1 className='mb-4'>Check out our menus!</h1>
-                                <Button className='bg-cream1 text-dark-2 rounded-sm'>{buttonLabel}</Button>
+                                {/*<Button className='bg-cream1 text-dark-2 rounded-sm'>{buttonLabel}</Button>*/}
                             </div>
                         </div>
                     </div>

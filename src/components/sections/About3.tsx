@@ -6,6 +6,7 @@ import fish from '../../../public/assets/images/site-images/foodImages/fish.png'
 import { Button } from '../ui/button'
 import 'animate.css'
 import useScrollTrigger from '@/hooks/useScrollTrigger'
+import { Link } from 'react-router-dom'
 
 const About = () => {
 
@@ -37,7 +38,9 @@ const About = () => {
                   dining experience includes everything you need to have an unforgettable evening.
                 </p>
                 <h1 className='mb-4'>Tell us about your next event!</h1>
-                <Button className='bg-cream1 text-dark-2 rounded-sm'>Consultation</Button>
+                <Button className='bg-cream1 text-dark-2 rounded-sm'>
+                  <Link to='/contact'>Contact Us</Link>
+                </Button>
               </div>
             </div>
             <div className="w-full px-4 lg:w-6/12">

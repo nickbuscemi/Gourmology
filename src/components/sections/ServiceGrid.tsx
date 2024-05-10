@@ -1,12 +1,12 @@
 import { ServiceItem } from "../shared/ServiceItem";  // Adjust the import path as necessary
-import {
+{/*import {
   BrainCogIcon,
   PackageIcon,
   ThumbsUpIcon,
   TrophyIcon,
   UsersIcon,
   ZapIcon,
-} from "lucide-react";
+} from "lucide-react";*/}
 
 import bartenders from '../../../public/assets/icons/serviceIcons/bartenders.png'
 import buffet from '../../../public/assets/icons/serviceIcons/buffet.png'
@@ -30,7 +30,7 @@ import { serviceData } from "@/data/ServiceData";
 const icons: any = {
     "Private Chef Experience": privateChef,
     "Sit Down Dinners": sitDown,
-    "Servers, Bartenders, Grill Man": bartenders,
+    "Servers Bartenders Grill Man": bartenders,
     "Buffett Service and Delivery": buffet,
     "On Premise Cooking Stations": cookingStations,
     "Rentals": rentals

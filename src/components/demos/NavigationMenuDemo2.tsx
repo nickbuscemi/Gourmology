@@ -50,16 +50,16 @@ export function NavigationMenuDemo2() {
                 </Link>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              {/*<NavigationMenuItem>
                 <Link to="/book">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Bookings
                   </NavigationMenuLink>
                 </Link>
-              </NavigationMenuItem>
+  </NavigationMenuItem>*/}
 
               <NavigationMenuItem>
-                <Link to="/home">
+                <Link to="/">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Home
                   </NavigationMenuLink>

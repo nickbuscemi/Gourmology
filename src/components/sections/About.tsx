@@ -2,6 +2,7 @@
 //import steak from '../../../public/assets/images/site-images/foodImages/steak.png'
 //import table1 from '../../../public/assets/images/site-images/eventImages/table1.jpg'
 //import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import lamb from '../../../public/assets/images/site-images/foodImages/lamb.jpg'
 import { Button } from '../ui/button'
 import useScrollTrigger from '@/hooks/useScrollTrigger';
@@ -51,7 +52,9 @@ const About = () => {
                 guests will be raving for weeks to come!
                 </p>
                 <h1 className='mb-4'>Check out our menus!</h1>
-                <Button className='bg-cream1 text-dark-2 rounded-sm'>menus</Button>
+                <Button className='bg-cream1 text-dark-2 rounded-sm'>
+                  <Link to='/menus'>Menus</Link>
+                </Button>
               </div>
             </div>
           </div>

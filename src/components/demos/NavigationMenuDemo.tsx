@@ -28,7 +28,7 @@ const components: { title: string; href: string; description: string }[] = [
       "Experience the elegance of fine dining with our sit down dinner services.",
   },
   {
-    title: "Servers, Bartenders, Grill Man",
+    title: "Servers Bartenders Grill Man",
     href: "/services/servers-bartenders-grill-man",
     description:
       "Elevate your event with our professional servers, bartenders, and grill experts.",
@@ -102,13 +102,13 @@ export function NavigationMenuDemo() {
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        {/*<NavigationMenuItem>
           <Link to="/book">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               bookings
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+                  </NavigationMenuItem>*/}
 
       </NavigationMenuList>
     </NavigationMenu>
