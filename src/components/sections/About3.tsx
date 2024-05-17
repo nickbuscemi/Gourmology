@@ -1,26 +1,14 @@
-//import steak from '../../../public/assets/images/site-images/foodImages/steak.png'
-//import lamb from '../../../public/assets/images/site-images/foodImages/lamb.jpg'
-//import table1 from '../../../public/assets/images/site-images/eventImages/table1.jpg'
-//import { useState, useEffect } from 'react'
-//import fish from '../../../public/assets/images/site-images/foodImages/fish.png'
 import { Button } from '../ui/button'
 import 'animate.css'
 import useScrollTrigger from '@/hooks/useScrollTrigger'
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import { cloudflareImages } from '@/data/cloudFlareImagesConfig'
+import { cloudFlareImages } from '@/data/cloudFlareImagesConfig'
 
 const About = () => {
 
   const [isVisibleText, textRef] = useScrollTrigger();
   const [isVisibleImage, imageRef] = useScrollTrigger();
-  const [imageUrl, setImageUrl] = useState<string>('')
-
-  useEffect(() => {
-    const url = cloudflareImages.fish;
-    setImageUrl(url);
-  }, []);
-
+  
   return (
     <div>
       <section id='about' className="overflow-hidden lg:pt-[120px] lg:pb-[90px] bg-dark-1">
@@ -60,7 +48,7 @@ const About = () => {
                 >
                   <div className="relative z-10 my-4">
                     <img
-                      src={imageUrl}
+                      src={cloudFlareImages.fish}
                       alt="A delicious dish of fish"
                       className="w-full"
                     />

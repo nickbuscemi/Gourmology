@@ -1,17 +1,18 @@
-import siteLogo from '../../../public/assets/images/logos/site-logo-white.png';
 import { Link } from 'react-router-dom';  
 import { NavigationMenuDemo2 } from '../demos/NavigationMenuDemo2';
+import { cloudFlareLogos } from '@/data/cloudFlareImagesConfig'
+
 
 const SideNavBar = () => {
   return (
     <section className="sidebar sticky top-0 z-50">
-        <div className="flex justify-between items-center py-4 px-6 w-full">
-            <Link to="/" className="flex gap-3 items-center px-3">
+        <div className="flex justify-between items-center py-4 px-4 w-full">
+            <Link to="/" className="flex gap-3 items-center">
                 <img 
-                    src={siteLogo}
+                    src={cloudFlareLogos.siteLogoWhite}
                     alt="logo"
-                    width={65}
-                    height={65}
+                    width={105}
+                    height={105}
                 />
             </Link>
             <NavigationMenuDemo2 />

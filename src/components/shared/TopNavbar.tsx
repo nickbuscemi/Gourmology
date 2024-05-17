@@ -1,7 +1,6 @@
-import siteLogo from '../../../public/assets/images/logos/site-logo-white.png';
 import { Link } from 'react-router-dom';  
 import { NavigationMenuDemo } from '../demos/NavigationMenuDemo';
-
+import { cloudFlareLogos } from '@/data/cloudFlareImagesConfig'
 
 const TopNavbar = () => {
   return (
@@ -9,7 +8,7 @@ const TopNavbar = () => {
         <div className="flex justify-between items-center py-4 px-16 w-full">
             <Link to="/" className="flex gap-3 items-center">
                 <img 
-                    src={siteLogo}
+                    src={cloudFlareLogos.siteLogoWhite}
                     alt="logo"
                     width={165}
                     height={165}

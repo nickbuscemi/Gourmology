@@ -2,6 +2,7 @@
 //import { CarouselComp } from "../shared/CarouselComp";
 import useScrollTrigger from '@/hooks/useScrollTrigger';
 
+
 const About2 = () => {
 
   const [isVisibleText, textRef] = useScrollTrigger();

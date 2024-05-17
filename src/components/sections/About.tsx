@@ -3,14 +3,15 @@
 //import table1 from '../../../public/assets/images/site-images/eventImages/table1.jpg'
 //import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import lamb from '../../../public/assets/images/site-images/foodImages/lamb.jpg'
 import { Button } from '../ui/button'
 import useScrollTrigger from '@/hooks/useScrollTrigger';
+import { cloudFlareImages } from '@/data/cloudFlareImagesConfig'
 
 const About = () => {
 
   const [isVisibleText, textRef] = useScrollTrigger();
   const [isVisibleImage, imageRef] = useScrollTrigger();
+  
 
   return (
     <div>
@@ -26,7 +27,7 @@ const About = () => {
                     >
                       <div className="relative z-10 my-4">
                         <img
-                          src={lamb}
+                          src={cloudFlareImages.lamb}
                           alt=""
                           className="w-full"
                         />

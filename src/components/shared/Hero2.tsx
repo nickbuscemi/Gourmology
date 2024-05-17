@@ -3,11 +3,11 @@ import { useEffect, useRef, useState } from 'react';
 import facebook from '../../../public/assets/icons/facebook.svg'
 import email from '../../../public/assets/icons/email.svg'
 import phone from '../../../public/assets/icons/phone.svg'*/
-import logoWords from '../../../public/assets/images/logos/site-logo-words-white.png'
 import downIcon from '../../../public/assets/icons/downIcon.svg'
 import video1 from '../../../public/videos/site-videos/video1.mp4'
 import video1gif from '../../../public/videos/site-videos/video1gif.gif'
 //import { Link } from 'react-router-dom'
+import { cloudFlareLogos } from '@/data/cloudFlareImagesConfig'
 import '../../App.css'
 
 export default function Hero2() {
@@ -140,7 +140,7 @@ export default function Hero2() {
                   GOURMOLOGY
       </h1>*/}
                 <img 
-                  src={logoWords}  
+                  src={cloudFlareLogos.siteLogoWhiteWords}  
                   alt="Gourmology" 
                   className="mx-auto"
                   width='full'
