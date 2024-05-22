@@ -1,6 +1,7 @@
 "use client"
 import * as React from "react"
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 import { cn } from "@/lib/utils"
 import {
@@ -53,31 +54,34 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 export function NavigationMenuDemo() {
+
+  const navigate = useNavigate();
+
+  const handleTriggerClick = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
 
       <NavigationMenuItem>
-        <Link to="/menus">
-            <NavigationMenuTrigger>menus</NavigationMenuTrigger>
+            <NavigationMenuTrigger onClick={() => handleTriggerClick('/menus')}>
+              menus
+            </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr]">
                   
-                  <ListItem href="/menus/catering-menu" title="Catering Menu">
+                  <ListItem href="/menus" title="Catering Menu">
                     Our perfectly curated menu packages for any event.
-                  </ListItem>
-                  <ListItem href="/menus/meal-prep" title="Meal Preperation">
-                    Save time and eat better with our meal prep services.
                   </ListItem>
                   
                 </ul>
-              </NavigationMenuContent>
-          </Link>
+              </NavigationMenuContent>  
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link to="/services">
-            <NavigationMenuTrigger>services</NavigationMenuTrigger>
+            <NavigationMenuTrigger onClick={() => handleTriggerClick('/services')}>services</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   {components.map((component) => (
@@ -92,24 +96,23 @@ export function NavigationMenuDemo() {
                   ))}
                 </ul>
               </NavigationMenuContent>
-          </Link>
-          </NavigationMenuItem>
-
+        </NavigationMenuItem>
+        
         <NavigationMenuItem>
-          <Link to="/contact">
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              contact us
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink asChild>
+            <Link to="/aboutus" className={navigationMenuTriggerStyle()}>
+              our team
+            </Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
 
-        {/*<NavigationMenuItem>
-          <Link to="/book">
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              bookings
-            </NavigationMenuLink>
-          </Link>
-                  </NavigationMenuItem>*/}
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild>
+            <Link to="/contact" className={navigationMenuTriggerStyle()}>
+              contact us
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
 
       </NavigationMenuList>
     </NavigationMenu>

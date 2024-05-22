@@ -1,4 +1,5 @@
-const accountHash = "Hc43f2O33sjdL-Gqef83Rw";
+const accountHash = import.meta.env.VITE_CLOUDFLARE_ACCOUNT_HASH
+
 
 if (!accountHash) {
   throw new Error('Missing Cloudflare account hash.');

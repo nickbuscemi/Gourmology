@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';  
-import { NavigationMenuDemo2 } from '../demos/NavigationMenuDemo2';
 import { cloudFlareLogos } from '@/data/cloudFlareImagesConfig'
+import SideNavDrawer from './SideNavDrawer';
 
 
 const SideNavBar = () => {
@@ -15,7 +15,7 @@ const SideNavBar = () => {
                     height={105}
                 />
             </Link>
-            <NavigationMenuDemo2 />
+            <SideNavDrawer />
         </div>
     </section>
   )

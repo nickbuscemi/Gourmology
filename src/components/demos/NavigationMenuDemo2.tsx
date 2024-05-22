@@ -43,20 +43,20 @@ export function NavigationMenuDemo2() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link to="/aboutus">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Our Team
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link to="/contact">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Contact Us
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-
-              {/*<NavigationMenuItem>
-                <Link to="/book">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Bookings
-                  </NavigationMenuLink>
-                </Link>
-  </NavigationMenuItem>*/}
 
               <NavigationMenuItem>
                 <Link to="/">

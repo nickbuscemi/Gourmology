@@ -17,16 +17,6 @@ import sitDown from '../../../public/assets/icons/serviceIcons/sitDown.png'
 
 import { serviceData } from "@/data/ServiceData";
 
-// Mapping of service titles to icons
-{/*const icons: any = {
-  "Private Chef Experience": BrainCogIcon,
-  "Sit Down Dinners": PackageIcon,
-  "Servers, Bartenders, Grill Man": ZapIcon,
-  "Buffett Service and Delivery": TrophyIcon,
-  "On Premise Cooking Stations": UsersIcon,
-  "Rentals": ThumbsUpIcon
-};*/}
-
 const icons: any = {
     "Private Chef Experience": privateChef,
     "Sit Down Dinners": sitDown,

@@ -1,11 +1,8 @@
 import { useScript } from "@/hooks/useScript"
 
 const Testimonials: React.FC = () => {
-    // URL to the Elfsight platform script
-    const elfsightScriptUrl = "https://static.elfsight.com/platform/platform.js";
     
-  
-    // Use the custom hook to load the script
+    const elfsightScriptUrl = "https://static.elfsight.com/platform/platform.js";
     
     useScript(elfsightScriptUrl);
     

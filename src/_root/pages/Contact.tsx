@@ -31,7 +31,7 @@ const Contact = () => {
                   <p><strong>Phone:</strong> (347) 453-7738</p>
                 </a>
                 <p><strong>Email:</strong> contact@example.com</p>
-                <p className="flex items-center">
+                <div className="flex items-center">
                     <span>Follow us on:</span>
                     <div className="flex items-center ml-2 gap-4">
                       <Link to="https://www.instagram.com/gourm.ology/" className="block">
@@ -41,7 +41,7 @@ const Contact = () => {
                         <img src={facebook} alt="Facebook" className="w-6 h-6 cursor-pointer" />
                       </Link>
                     </div>
-                  </p>
+                  </div>
               </div>
             </div>
           </div>
