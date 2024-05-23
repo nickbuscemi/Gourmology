@@ -7,11 +7,12 @@ const AboutUs = () => {
 
   const h1 = "Ana and Sammy";
   const p = "A gourmet chef and a fine dining service expert, both with their decades of knowledge come together to give you a one of a kind experience.";
-  const img = cloudFlareImages.aboutheader1;
+  const mediaType = 'image';
+  const mediaSrc = cloudFlareImages.aboutheader1;
 
   return (
     <>
-    <Hero3 h1={h1} p={p} img={img}/>
+    <Hero3 h1={h1} p={p} mediaType={mediaType} mediaSrc={mediaSrc} />
     <About3 />
     </>
   )

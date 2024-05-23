@@ -1,10 +1,10 @@
+// ContactForm.tsx
 "use client";
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { DatePicker } from "../ui/datePicker";
-import { TimePickerWrapper } from "../ui/time-picker-wrapper";
+import { MyDateTimePicker } from "../ui/MyDateTimePicker";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -22,7 +22,6 @@ const formSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
   phone: z.string().min(10, { message: "Please enter a valid phone number" }),
   eventDate: z.date({ message: "Please select a date" }),
-  eventTime: z.string().min(1, { message: "Please select a time" }),
   message: z.string().min(10, { message: "Message must be at least 10 characters long" }),
 });
 
@@ -36,13 +35,13 @@ export const ContactForm = () => {
       email: '',
       phone: '',
       eventDate: undefined,
-      eventTime: '',
       message: '',
     },
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values)
+
+    console.log("values", values);
     try {
       const response = await fetch('http://localhost:5001/api/contact', {
         method: 'POST',
@@ -51,7 +50,7 @@ export const ContactForm = () => {
         },
         body: JSON.stringify({
           ...values,
-          eventDate: values.eventDate?.toISOString().split('T')[0], // Format date as YYYY-MM-DD
+          eventDate: values.eventDate?.toISOString(), // Format date as YYYY-MM-DD
         }),
       });
 
@@ -127,51 +126,30 @@ export const ContactForm = () => {
               )}
             />
 
-            <div className="flex space-x-2 w-full">
-              <FormField
-                control={form.control}
-                name="eventDate"
-                render={() => (
-                  <FormItem className="flex-1">
-                    <FormLabel>Date of Event</FormLabel>
-                    <FormControl>
-                      <Controller
-                        control={form.control}
-                        name="eventDate"
-                        render={({ field: { onChange, onBlur, value, name } }) => (
-                          <DatePicker
-                            value={value}
-                            onChange={onChange}
-                            onBlur={onBlur}
-                            name={name}
-                          />
-                        )}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="eventTime"
-                render={({ field: { onChange, value, onBlur } }) => (
-                  <FormItem className="flex-1">
-                    <FormLabel>Time of Event</FormLabel>
-                    <FormControl>
-                      <TimePickerWrapper
-                        value={value || ""}
-                        onChange={onChange}
-                        onBlur={onBlur}
-                        name="eventTime"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
+            <FormField
+              control={form.control}
+              name="eventDate"
+              render={() => (
+                <FormItem className="flex-1">
+                  <FormLabel>Date and Time of Event</FormLabel>
+                  <FormControl>
+                    <Controller
+                      control={form.control}
+                      name="eventDate"
+                      render={({ field: { onChange, onBlur, value, name } }) => (
+                        <MyDateTimePicker
+                          value={value}
+                          onChange={onChange}
+                          onBlur={onBlur}
+                          name={name}
+                        />
+                      )}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
             <FormField
               control={form.control}

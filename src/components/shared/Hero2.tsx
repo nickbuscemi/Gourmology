@@ -9,6 +9,8 @@ import video1gif from '../../../public/videos/site-videos/video1gif.gif'
 import { cloudFlareLogos } from '@/data/cloudFlareImagesConfig'
 import { cloudFlareIcons } from '@/data/cloudFlareImagesConfig';
 import '../../App.css'
+import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
 
 export default function Hero2() {
   const videoRef = useRef<HTMLVideoElement>(null); 
@@ -149,31 +151,14 @@ export default function Hero2() {
                   Enjoy the taste of restaurant cuisine from the comfort of your own home or event space.
                 </p>
               </div>
-              
-              {/*<div className="mt-8 mb-8 gap-12 flex justify-center">
-                <Link to='https://www.instagram.com/gourm.ology/' >
-                <span>
-                  <img src={instagram} alt="Instagram" className="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer" />
-                </span>
-                </Link>
-                <span>
-                  <img src={email} alt="Email" className="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer" />
-                </span>
-                <span>
-                  <a href="tel:+13474537738">
-                    <img src={phone} alt="Phone" className="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer" />
-                  </a>
-                </span>
-                <Link to='https://www.facebook.com/Gourmology/'>
-                <span>
-                  <img src={facebook} alt="Facebook" className="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer" />
-                </span>
-                </Link>
-    </div>*/}
-              {/* End Buttons */}
             </div>
+            <div className='flex items-center justify-center pt-12'>
+            <Button className='text-dark-1 bg-cream1 border-none rounded-sm font-garamond text-xl'>
+                  <Link to='/contact'>Book Today!</Link>
+            </Button>
           </div>
-          <div className="absolute -bottom-20 lg:bottom-10 w-full text-center -mb-32">
+          </div>
+          <div className="absolute -bottom-0 top-84 lg:bottom-36 w-full text-center lg:-mb-32 -mb-24">
           <div className="cursor-pointer">
             <div className="scroll-down flex justify-center">
             <img 

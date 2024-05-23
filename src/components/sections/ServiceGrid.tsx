@@ -29,8 +29,25 @@ const icons: any = {
 
 export const ServiceGrid = () => {
   return (
-    <div className="animate__animated animate__fadeInUp animate__slower container pt-8 pb-8 md:pt-56 md:pb-32 lg:pt-72 font-garamond tracking-widest text-cream1">
-      <div className=" md:grid-cols-2 gap-24 pb-8 md:pb-24 hidden md:hidden lg:flex">
+    <div className="animate__animated animate__fadeInUp animate__slower container pt-8 pb-8 md:pt-56 md:pb-32 lg:pt-4 font-garamond tracking-widest text-cream1">
+      
+      <div className="flex flex-col items-center pb-8 md:pb-16">
+        {/*<h1 className="text-4xl">Our Services</h1>*/}
+        <p className="lg:text-2xl">Select to see more</p>
+      </div>
+      <div className="max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-12 pb-8 md:pb-24">
+          {serviceData.map((service) => (
+            <ServiceItem
+              key={service.title}
+              Icon={icons[service.title]}
+              title={service.title}
+              description={service.content1.description.join(" ")}
+            />
+          ))}
+        </div>
+      </div>
+      <div className=" md:grid-cols-2 gap-24 hidden md:hidden lg:flex">
             <div className="flex items-center">
               <p className="-mt-8 text-3xl md:mt-0 md:text-4xl">
                 We all know that the secret to hosting a successful event
@@ -45,22 +62,6 @@ export const ServiceGrid = () => {
               </p>
             </div>
         </div>
-      <div className="flex flex-col items-center pb-8">
-        <h1 className="text-4xl">Our Services</h1>
-        <p>Select to see more</p>
-      </div>
-      <div className="max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-12">
-          {serviceData.map((service) => (
-            <ServiceItem
-              key={service.title}
-              Icon={icons[service.title]}
-              title={service.title}
-              description={service.content1.description.join(" ")}
-            />
-          ))}
-        </div>
-      </div>
     </div>
   );
 };

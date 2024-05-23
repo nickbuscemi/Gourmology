@@ -37,7 +37,8 @@ module.exports = {
         'light-3': '#7878A3',
         'light-4': '#5C5C7B',
         'green1': '#6EEB82',
-        'cream1': '#f5f2e4'
+        'cream1': '#f5f2e4',
+        'muted-custom': '#777777'
       },
       screens: {
         'xs': '480px',
