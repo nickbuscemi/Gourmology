@@ -10,6 +10,7 @@ import { Services, Contact, Menus } from '../src/_root/index';
 import AboutUs from './_root/pages/AboutUs';
 import CateringMenu from './_root/pages/Menus/CateringMenu';
 import { ServicePage } from './_root/pages/Services/ServicePage';
+import Gallery from './_root/pages/Gallery';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/services/:serviceName" element={<ServicePage />} />
                 <Route path="/aboutus" element={<AboutUs />} />
+                <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/menus" element={<Menus />} />
                 <Route path='/menus/catering-menu' element={<CateringMenu />} />

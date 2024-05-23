@@ -15,7 +15,7 @@ const About = () => {
 
   return (
     <div>
-      <section id='about' className="overflow-hidden pb-12 lg:pt-[120px] lg:pb-[90px] bg-dark-1">
+      <section id='about' className="overflow-hidden pb-12 lg:pt-[90px] lg:pb-[90px] bg-dark-1">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">
@@ -52,9 +52,9 @@ const About = () => {
                 with crisp flavors & fresh ingredients. Ensuring you and your 
                 guests will be raving for weeks to come!
                 </p>
-                <h1 className='mb-4'>Check out our menus!</h1>
+                <h1 className='mb-4'>See what we have to offer!</h1>
                 <Button className='bg-cream1 text-dark-2 rounded-sm'>
-                  <Link to='/menus'>Menus</Link>
+                  <Link to='/services'>Services</Link>
                 </Button>
               </div>
             </div>

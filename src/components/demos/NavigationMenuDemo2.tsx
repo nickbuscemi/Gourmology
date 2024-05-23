@@ -51,6 +51,14 @@ export function NavigationMenuDemo2() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link to="/gallery">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Gallery
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link to="/contact">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Contact Us

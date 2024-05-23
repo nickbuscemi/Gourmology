@@ -5,7 +5,7 @@ import { cloudFlareImages } from "@/data/cloudFlareImagesConfig";
 
 const AboutUs = () => {
 
-  const h1 = "Ana and Sammy";
+  const h1 = "Anna and Sammy";
   const p = "A gourmet chef and a fine dining service expert, both with their decades of knowledge come together to give you a one of a kind experience.";
   const mediaType = 'image';
   const mediaSrc = cloudFlareImages.aboutheader1;

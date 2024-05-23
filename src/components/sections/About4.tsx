@@ -9,7 +9,7 @@ const About2 = () => {
 
   return (
     <div>
-      <section id='about2' className="overflow-hidden pb-12 lg:pt-[120px] lg:pb-[90px] bg-dark-1">
+      <section id='about2' className="overflow-hidden pb-12 lg:pt-[90px] lg:pb-[90px] bg-dark-1">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-center -mx-4">
             
@@ -29,7 +29,7 @@ const About2 = () => {
                  much.
                 </p>
                 <Button className='bg-cream1 text-dark-2 rounded-sm'>
-                  <Link to='/services'>Services</Link>
+                  <Link to='/menus'>Menus</Link>
                 </Button>
               </div>
             </div>

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
-    <footer className="bg-dark-2 text-center text-white">
+    <footer className="bg-cream1 text-center">
         <div className="container px-6 pt-6 mx-auto">
             {/* Social media icons container */}
             

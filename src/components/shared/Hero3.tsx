@@ -1,8 +1,8 @@
 interface Hero3Props {
     h1: string;
     p: string;
-    mediaType: 'image' | 'video';
-    mediaSrc: string;
+    mediaType?: 'image' | 'video';
+    mediaSrc?: string;
   }
   
   export default function Hero3({ h1, p, mediaType, mediaSrc }: Hero3Props) {
@@ -19,31 +19,33 @@ interface Hero3Props {
                 {p}
               </p>
             </div>
-            <div className="mt-10 relative max-w-6xl mx-auto">
-              {mediaType === 'image' ? (
-                <img
-                  src={mediaSrc}
-                  className="rounded-lg"
-                  alt="Image Description"
-                />
-              ) : (
-                <video
-                  src={mediaSrc}
-                  className="rounded-lg"
-                  controls={false}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                />
-              )}
-              <div className="absolute bottom-12 -start-20 -z-[1] w-48 h-48 bg-gradient-to-b from-primary-foreground via-primary-foreground to-background p-px rounded-lg">
-                <div className="w-48 h-48 rounded-lg bg-background/10" />
+            {mediaSrc && (
+              <div className="mt-10 relative max-w-6xl mx-auto">
+                {mediaType === 'image' ? (
+                  <img
+                    src={mediaSrc}
+                    className="rounded-lg"
+                    alt="Image Description"
+                  />
+                ) : (
+                  <video
+                    src={mediaSrc}
+                    className="rounded-lg"
+                    controls={false}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                )}
+                <div className="absolute bottom-12 -start-20 -z-[1] w-48 h-48 bg-gradient-to-b from-primary-foreground via-primary-foreground to-background p-px rounded-lg">
+                  <div className="w-48 h-48 rounded-lg bg-background/10" />
+                </div>
+                <div className="absolute -top-12 -end-20 -z-[1] w-48 h-48 bg-gradient-to-t from-primary-foreground via-primary-foreground to-background p-px rounded-full">
+                  <div className="w-48 h-48 rounded-full bg-background/10" />
+                </div>
               </div>
-              <div className="absolute -top-12 -end-20 -z-[1] w-48 h-48 bg-gradient-to-t from-primary-foreground via-primary-foreground to-background p-px rounded-full">
-                <div className="w-48 h-48 rounded-full bg-background/10" />
-              </div>
-            </div>
+            )}
           </div>
         </div>
         {/* End Hero */}

@@ -108,6 +108,14 @@ export function NavigationMenuDemo() {
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
+            <Link to="/gallery" className={navigationMenuTriggerStyle()}>
+              gallery
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild>
             <Link to="/contact" className={navigationMenuTriggerStyle()}>
               contact us
             </Link>

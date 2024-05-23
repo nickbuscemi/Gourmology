@@ -1,4 +1,5 @@
 import stock1 from '../../public/assets/images/site-images/stock1.jpeg'
+//import { cloudFlareImages } from './cloudFlareImagesConfig';
 
 export const serviceData = [
     {

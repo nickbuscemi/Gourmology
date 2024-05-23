@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/drawer"
 import { FC } from "react"
 import { Link } from "react-router-dom"
-const pTagClasses = "text-3xl font-semibold tracking-widest hover:bg-white/20 backdrop-blur-sm rounded-md p-2 transition duration-300 ease-in-out";
+const pTagClasses = "text-3xl tracking-widest hover:bg-white/20 backdrop-blur-sm rounded-md p-2 transition duration-300 ease-in-out";
 
 
 const SideNavDrawer: FC = () => {
@@ -27,35 +27,41 @@ const SideNavDrawer: FC = () => {
         </DrawerTrigger>
         <DrawerContent>
             
-          <div className="flex flex-col gap-4 p-4 items-center justify-center pt-16">
+          <div className="flex flex-col gap-4 p-4 items-center justify-center pt-10">
           
             <Link to="/menus" className={pTagClasses}>
               <DrawerClose>
-                Menus
+                menus
               </DrawerClose>
             </Link>
             
             <Link to="/services" className={pTagClasses}>
               <DrawerClose>
-                Services
+                services
               </DrawerClose>
             </Link>
 
             <Link to="/aboutus" className={pTagClasses}>
               <DrawerClose>
-                Our Team
+                our team
+              </DrawerClose>
+            </Link>
+
+            <Link to="/gallery" className={pTagClasses}>
+              <DrawerClose>
+                gallery
               </DrawerClose>
             </Link>
 
             <Link to="/contact" className={pTagClasses}>
               <DrawerClose>
-                Contact Us
+                contact us
               </DrawerClose>
             </Link>
 
             <Link to="/" className={pTagClasses}>
               <DrawerClose>
-                Home
+                home
               </DrawerClose>
             </Link>
             

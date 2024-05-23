@@ -1,5 +1,5 @@
 
-//import { CarouselComp } from "../shared/CarouselComp";
+
 import useScrollTrigger from '@/hooks/useScrollTrigger';
 
 
@@ -9,7 +9,7 @@ const About2 = () => {
  
   return (
     <div>
-      <section id='about2' className="overflow-hidden pb-12 lg:pt-[120px] lg:pb-[190px] bg-dark-1">
+      <section id='about2' className="overflow-hidden pb-12 lg:pt-[90px] lg:pb-[90px] bg-dark-1">
         <div className="container mx-auto">
           <div ref={textRef} className={`flex flex-wrap items-center justify-center -mx-4
             ${isVisibleText ? 'animate__animated animate__fadeInUp animate__slower' : ''}`}>
@@ -26,7 +26,7 @@ const About2 = () => {
                   We do not provide linen, so you have the liberty of choosing your 
                   preferred style.
                 </p>
-                <p className="mb-0 text-base text-body-color dark:text-dark-6">
+                <p className="mb-4 text-base text-body-color dark:text-dark-6">
                   After the meal, we will leave your kitchen clean, 
                   just how we found it.                
                 </p>

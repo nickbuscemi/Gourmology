@@ -1,8 +1,10 @@
 import { Outlet } from "react-router-dom";
 import TopNavbar from "../components/shared/TopNavbar";
-import Footer from "../components/shared/Footer";
+//import Footer from "../components/shared/Footer";
+
 import SideNavBar from "@/components/shared/SideNavBar";
 import { useState, useEffect } from "react";
+import { Footer2 } from "@/components/shared/Footer2";
 
 const RootLayout = () => {
 
@@ -26,7 +28,7 @@ const RootLayout = () => {
         <section className="flex flex-col w-full">
             <Outlet />
         </section>
-        <Footer />
+        <Footer2 />
     </div>
   )
 }

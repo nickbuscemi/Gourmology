@@ -8,6 +8,9 @@ export const cloudFlareImages = {
   paella: getCloudflareImageUrl('38d24b66-a42e-41e9-9d5b-92a425034100'),
   table1: getCloudflareImageUrl('c4f1a652-0014-49c1-8c7b-485a0e651a00'),
   aboutheader1: getCloudflareImageUrl('6f7ffe06-edb5-4ccf-d30f-d780a0cd2700'),
+  lobsterroll: getCloudflareImageUrl('2f91ae86-a481-4afc-fbd7-239497bdfa00'),
+  mealprep: getCloudflareImageUrl('ecf23a37-8529-41c2-5a70-7eaf7f347900'),
+  caciopepe: getCloudflareImageUrl('b525e1fc-515b-4b90-4a8e-6ca704e56800'),
   // Add more images as needed
 };
 
