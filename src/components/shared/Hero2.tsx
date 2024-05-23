@@ -153,7 +153,7 @@ export default function Hero2() {
               </div>
             </div>
             <div className='flex items-center justify-center pt-12'>
-            <Button className='text-dark-1 bg-cream1 border-none rounded-sm font-garamond text-xl'>
+            <Button className='text-dark-1 bg-cream1 tracking-widest border-none rounded-sm font-garamond text-xl'>
                   <Link to='/contact'>Book Today!</Link>
             </Button>
           </div>
