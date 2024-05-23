@@ -1,4 +1,3 @@
-import Hero from "@/components/shared/Hero";
 import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import Hero3 from "@/components/shared/Hero3";
 import video2 from '../../../public/videos/site-videos/video2.mp4'
