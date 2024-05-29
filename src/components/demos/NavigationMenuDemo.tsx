@@ -106,13 +106,13 @@ export function NavigationMenuDemo() {
           </NavigationMenuLink>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        {/*<NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Link to="/gallery" className={navigationMenuTriggerStyle()}>
               gallery
             </Link>
           </NavigationMenuLink>
-        </NavigationMenuItem>
+                  </NavigationMenuItem>*/}
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild>

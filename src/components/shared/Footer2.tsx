@@ -9,11 +9,11 @@ import { Button } from "@/components/ui/button"
 
 export function Footer2() {
   return (
-    <Footer container className='bg-dark-3 font-garamond'>
+    <Footer container className='bg-dark-3 font-garamond lg:px-10'>
       <div className="w-full">
 
         <div className="flex flex-col md:flex-row items-center md:justify-between pt-6 md:pt-2 w-full px-6">
-        <div className='flex flex-col lg:w-1/4 w-full'>
+        <div className='flex flex-col md:w-2/4 lg:w-1/4 w-full'>
             <div className='flex'>
                 <Footer.Brand
                     href="/"

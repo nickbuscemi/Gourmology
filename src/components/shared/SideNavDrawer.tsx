@@ -47,11 +47,11 @@ const SideNavDrawer: FC = () => {
               </DrawerClose>
             </Link>
 
-            <Link to="/gallery" className={pTagClasses}>
+            {/*<Link to="/gallery" className={pTagClasses}>
               <DrawerClose>
                 gallery
               </DrawerClose>
-            </Link>
+  </Link>*/}
 
             <Link to="/contact" className={pTagClasses}>
               <DrawerClose>
