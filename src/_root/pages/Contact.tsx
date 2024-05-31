@@ -9,7 +9,7 @@ const Contact = () => {
 
   return (
     <>
-    <div className="lg:px-40">
+    <div className="lg:px-40 animate__animated animate__fadeIn">
     
     <div className="grid grid-cols-1 md:grid-cols-2 pb-20">
       <div className="flex flex-col items-center justify-center">

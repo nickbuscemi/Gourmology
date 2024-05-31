@@ -29,8 +29,8 @@ const icons: any = {
 
 export const ServiceGrid = () => {
   return (
-    <div className="animate__animated animate__fadeInUp animate__slower container pt-8 pb-8 md:pt-56 md:pb-32 lg:pt-4 font-garamond tracking-widest text-cream1">
-      
+    <div className="container pt-8 pb-8 md:pt-56 md:pb-32 lg:pt-4 font-garamond tracking-widest text-cream1">
+      <div className="animate__animated animate__fadeInUp animate__slower">
       <div className="flex flex-col items-center pb-8 md:pb-16">
         {/*<h1 className="text-4xl">Our Services</h1>*/}
         <p className="lg:text-2xl">Select to see more</p>
@@ -47,7 +47,7 @@ export const ServiceGrid = () => {
           ))}
         </div>
       </div>
-      <div className=" md:grid-cols-2 gap-24 hidden md:hidden lg:flex">
+      {/*<div className=" md:grid-cols-2 gap-24 hidden md:hidden lg:flex">
             <div className="flex items-center">
               <p className="-mt-8 text-3xl md:mt-0 md:text-4xl">
                 We all know that the secret to hosting a successful event
@@ -61,7 +61,8 @@ export const ServiceGrid = () => {
               but also keep your guests talking about it for years to come.
               </p>
             </div>
-        </div>
+        </div>*/}
+          </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ const About2 = () => {
       <section id='about2' className="overflow-hidden pb-12 lg:pt-[90px] lg:pb-[90px] bg-dark-1">
         <div className="container mx-auto">
           <div ref={textRef} className={`flex flex-wrap items-center justify-center -mx-4
-            ${isVisibleText ? 'animate__animated animate__fadeInUp animate__slower' : ''}`}>
+            ${isVisibleText ? 'animate__animated animate__fadeInUp' : 'opacity-0'}`}>
             
             {/* Text section now on the left */}
             <div className="w-full px-4">

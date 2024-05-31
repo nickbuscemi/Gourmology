@@ -18,7 +18,7 @@ const About = () => {
           <div 
               ref={textRef} 
               className={`w-full px-4 lg:w-1/2 xl:w-5/12 
-              ${isVisibleText ? 'animate__animated animate__fadeInLeft animate__slower' : ''}`}
+              ${isVisibleText ? 'animate__animated animate__fadeInLeft' : 'opacity-0'}`}
             >
               <div className="mt-10 mb-10 lg:mt-0 lg:mb-0 font-garamond tracking-widest text-cream1 text-lg">
                 <h2 className="mb-5 text-3xl font-bold text-cream1 sm:text-[40px]/[48px]">
@@ -34,7 +34,7 @@ const About = () => {
                   dining experience includes everything you need to have an unforgettable evening.
                 </p>
                 <h1 className='mb-4'>Tell us about your next event!</h1>
-                <Button className='bg-cream1 text-dark-2 rounded-sm'>
+                <Button className='bg-cream1 text-dark-2 rounded-lg'>
                   <Link to='/contact'>Contact Us</Link>
                 </Button>
               </div>
@@ -44,13 +44,13 @@ const About = () => {
                 <div 
                   ref={imageRef} 
                   className={`w-full px-3 sm:px-4 xl:w-full 
-                  ${isVisibleImage ? 'animate__animated animate__fadeInDown animate__slower' : ''}`}
+                  ${isVisibleImage ? 'animate__animated animate__fadeInRight' : 'opacity-0'}`}
                 >
                   <div className="relative z-10 my-4">
                     <img
                       src={cloudFlareImages.fish}
                       alt="A delicious dish of fish"
-                      className="w-full"
+                      className="w-full rounded-lg"
                     />
                   </div>
                 </div>

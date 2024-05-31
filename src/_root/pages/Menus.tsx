@@ -23,7 +23,7 @@ const Menus = () => {
               Our Menus
             </h2>
           </div>
-          <div className="flex flex-col mt-3 animate__animated animate__fadeIn animate__slower">
+          <div className="flex flex-col mt-3 animate__animated animate__fadeIn">
             <Tabs defaultValue={isActive} onValueChange={setIsActive} className="font-garamond tracking-widest text-cream1 text-2xl">
               <TabsList>
                 <TabsTrigger value="catering" onClick={() => setIsActive('catering')} className={isActive === 'catering' ? triggerClass : ''}>Catering</TabsTrigger>

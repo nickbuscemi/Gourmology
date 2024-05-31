@@ -30,7 +30,7 @@ const ServiceContent2 = ({
                             <div className="flex items-center -mx-3 sm:-mx-4">
                                 <div ref={imageRef}
                                     className={`w-full px-3 sm:px-4 xl:w-full
-                                    ${isVisibleImage ? 'animate__animated animate__fadeInDown animate__slower' : ''}`}
+                                    ${isVisibleImage ? 'animate__animated animate__fadeInDown' : 'opacity-0'}`}
                                 >
                                     <div className="relative z-10 my-4">
                                         <img
@@ -45,7 +45,7 @@ const ServiceContent2 = ({
                         <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
                             <div ref={textRef}
                                 className={`mt-10 lg:mt-0 font-garamond tracking-widest text-cream1 text-lg
-                                ${isVisibleText ? 'animate__animated animate__fadeInRight animate__slower' : ''}`}>
+                                ${isVisibleText ? 'animate__animated animate__fadeInRight' : 'opacity-0'}`}>
                                 <h2 className="mb-5 text-3xl font-bold text-cream1 sm:text-[40px]/[48px]">
                                     {title}
                                 </h2>

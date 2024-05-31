@@ -76,6 +76,8 @@ export default function Hero2() {
     const about = document.getElementById('about');
     about?.scrollIntoView({ behavior: 'smooth' });
   }
+
+
   return (
     <>
       {/* Hero */}
@@ -153,8 +155,8 @@ export default function Hero2() {
               </div>
             </div>
             <div className='flex items-center justify-center pt-12'>
-            <Button className='text-dark-1 bg-cream1 tracking-widest border-none rounded-sm font-garamond text-xl'>
-                  <Link to='/contact'>Book Today!</Link>
+            <Button className='text-cream1 bg-dark-1 tracking-widest rounded-lg font-garamond text-lg'>
+                  <Link to='/contact'>Book Today</Link>
             </Button>
           </div>
           </div>

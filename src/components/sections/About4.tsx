@@ -16,7 +16,7 @@ const About2 = () => {
             {/* Text section now on the left */}
             <div ref={textRef} 
             className={`w-full px-4
-            ${isVisibleText ? 'animate__animated animate__fadeInUp animate__slower animate__delay-1s' : ''}`}
+            ${isVisibleText ? 'animate__animated animate__fadeInUp animate__delay-1s' : 'opacity-0'}`}
             >
               <div className="mt-10 lg:mt-0 font-garamond tracking-widest">
                 <h2 className="mb-5 text-3xl font-bold text-cream1 sm:text-[40px]/[48px]">
@@ -28,7 +28,7 @@ const About2 = () => {
                  will absolutely love, and all at a great rate you will love just as 
                  much.
                 </p>
-                <Button className='bg-cream1 text-dark-2 rounded-sm'>
+                <Button className='bg-cream1 text-dark-2 rounded-lg'>
                   <Link to='/menus'>Menus</Link>
                 </Button>
               </div>

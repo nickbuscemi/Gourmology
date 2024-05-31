@@ -9,7 +9,7 @@ interface Hero3Props {
     return (
       <>
         {/* Hero */}
-        <div className="relative overflow-hidden py-12 lg:py-24">
+        <div className="relative overflow-hidden py-12 lg:py-24 animate__animated animate__fadeIn">
           <div className="container">
             <div className="max-w-2xl text-center mx-auto">
               <h1 className="scroll-m-20 text-5xl font-garamond text-cream1 tracking-wide lg:text-5xl">
