@@ -6,7 +6,7 @@ import phone from '../../../public/assets/icons/phone.svg'*/
 import video1 from '../../../public/videos/site-videos/video1.mp4'
 import video1gif from '../../../public/videos/site-videos/video1gif.gif'
 //import { Link } from 'react-router-dom'
-import { cloudFlareLogos } from '@/data/cloudFlareImagesConfig'
+//import { cloudFlareLogos } from '@/data/cloudFlareImagesConfig'
 import { cloudFlareIcons } from '@/data/cloudFlareImagesConfig';
 import '../../App.css'
 import { Button } from '../ui/button';
