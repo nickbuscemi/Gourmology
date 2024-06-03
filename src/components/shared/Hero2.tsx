@@ -141,7 +141,7 @@ export default function Hero2() {
               </div>
               <div className="mt-4 pb-2 md:pb-3 animate__animated animate__fadeIn animate__slower animate__delay-1s">
                 <img 
-                  src={cloudFlareLogos.siteLogoWhiteWords}  
+                  src="https://akqmdqkuzjliggqqmlaj.supabase.co/storage/v1/object/public/Gourmology/logos/site-logo-words-white.png" 
                   alt="Gourmology" 
                   className="mx-auto"
                   width='full'

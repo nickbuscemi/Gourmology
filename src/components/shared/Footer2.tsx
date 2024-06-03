@@ -66,7 +66,12 @@ export function Footer2() {
         </div>
         <Footer.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between px-8">
-          <Footer.Copyright href="#" by="Gourmology, LLC" year={2024} />
+          <div className='flex gap-6'>
+            <Footer.Copyright href="#" by="Gourmology, LLC" year={2024} />
+            <Link to='/sign-in'>
+            <p className='text-light-2 hover:underline'>Admin Log in</p>
+            </Link>
+          </div>
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
                     <Link to='https://www.instagram.com/gourm.ology/' >
                     <span>

@@ -48,13 +48,13 @@ const ServiceContent1 = ({
                                 <div 
                                     ref={imageRef} 
                                     className={`w-full px-3 sm:px-4 xl:w-full 
-                                    ${isVisibleImage ? 'animate__animated animate__fadeInDown' : 'opacity-0'}`}
+                                    ${isVisibleImage ? 'animate__animated animate__fadeInRight' : 'opacity-0'}`}
                                 >
                                     <div className="relative z-10 my-4">
                                         <img
                                             src={imageUrl}
                                             alt={imageAlt}
-                                            className="w-full"
+                                            className="w-full rounded-lg"
                                         />
                                     </div>
                                 </div>

@@ -1,7 +1,7 @@
 interface Hero3Props {
     h1: string;
     p: string;
-    mediaType?: 'image' | 'video';
+    mediaType?: 'image' | 'video' | undefined;
     mediaSrc?: string;
   }
   

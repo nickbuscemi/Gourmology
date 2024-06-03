@@ -4,13 +4,21 @@ import { useEffect } from 'react';
 /*import SigninForm from './_auth/forms/SignInForm';
 import SignupForm from './_auth/forms/SignUpForm';
 import AuthLayout from './_auth/AuthLayout';*/
+
 import RootLayout from './_root/RootLayout';
 import { Home } from './_root';
 import { Services, Contact, Menus } from '../src/_root/index';
 import AboutUs from './_root/pages/AboutUs';
 import CateringMenu from './_root/pages/Menus/CateringMenu';
 import { ServicePage } from './_root/pages/Services/ServicePage';
+import AuthLayout from './_auth/AuthLayout';
+import SignInForm from './_auth/forms/SignInForm';
+import SignUpForm from './_auth/forms/SignUpForm';
 //import Gallery from './_root/pages/Gallery';
+
+import AdminLayout from './_admin/AdminLayout';
+import MainDash from './_admin/pages/MainDash';
+
 
 function App() {
 
@@ -23,10 +31,17 @@ function App() {
   return (
     <main className='flex h-screen'>
       <Routes>
-        {/* public routes */}
+        {/* private routes */}
+        <Route element={<AuthLayout />}>
+                <Route path="/sign-in" element={<SignInForm />} />
+                <Route path="/sign-up" element={<SignUpForm />} />
+        </Route>
         
-
-        {/* private routes */} 
+        {/* public admin routes */} 
+        <Route element={<AdminLayout />}>
+                <Route path="/dash-main" element={<MainDash />} />
+        </Route>
+        {/* public client routes */} 
         <Route element={<RootLayout />}>
                 <Route index element={<Home />} />
                 <Route path="/services" element={<Services />} />

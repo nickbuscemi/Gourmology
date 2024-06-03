@@ -21,7 +21,7 @@ const formSchema = z.object({
   name: z.string().min(1, { message: "Please enter your name" }),
   email: z.string().email({ message: "Invalid email address" }),
   phone: z.string().min(10, { message: "Please enter a valid phone number" }),
-  eventDate: z.date({ message: "Please select a date" }),
+  eventDate: z.date().optional(),
   message: z.string().min(10, { message: "Message must be at least 10 characters long" }),
 });
 
@@ -50,7 +50,7 @@ export const ContactForm = () => {
         },
         body: JSON.stringify({
           ...values,
-          eventDate: values.eventDate?.toISOString(), // Format date as YYYY-MM-DD
+          eventDate: values.eventDate ? values.eventDate.toISOString() : undefined, // Format date as YYYY-MM-DD
         }),
       });
 
@@ -131,7 +131,7 @@ export const ContactForm = () => {
               name="eventDate"
               render={() => (
                 <FormItem className="flex-1">
-                  <FormLabel>Date and Time of Event</FormLabel>
+                  <FormLabel>Do you have a date in mind?</FormLabel>
                   <FormControl>
                     <Controller
                       control={form.control}

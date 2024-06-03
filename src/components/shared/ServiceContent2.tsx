@@ -30,13 +30,13 @@ const ServiceContent2 = ({
                             <div className="flex items-center -mx-3 sm:-mx-4">
                                 <div ref={imageRef}
                                     className={`w-full px-3 sm:px-4 xl:w-full
-                                    ${isVisibleImage ? 'animate__animated animate__fadeInDown' : 'opacity-0'}`}
+                                    ${isVisibleImage ? 'animate__animated animate__fadeInLeft' : 'opacity-0'}`}
                                 >
                                     <div className="relative z-10 my-4">
                                         <img
                                             src={imageUrl}
                                             alt={imageAlt}
-                                            className="w-full"
+                                            className="w-full rounded-lg"
                                         />
                                     </div>
                                 </div>
@@ -52,8 +52,6 @@ const ServiceContent2 = ({
                                 <p className="mb-5 text-base text-body-color">
                                     {description}
                                 </p>
-                                <h1 className='mb-4'>Check out our menus!</h1>
-                                {/*<Button className='bg-cream1 text-dark-2 rounded-sm'>{buttonLabel}</Button>*/}
                             </div>
                         </div>
                     </div>
