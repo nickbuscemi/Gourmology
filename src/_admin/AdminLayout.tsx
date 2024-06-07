@@ -4,17 +4,18 @@ import TopBar from './shared/TopBar'
 import SideBar from './shared/SideBar'
 import BottomBar from './shared/BottomBar'
 
+
 const AdminLayout = () => {
   return (
-    <div className='w-full md:flex'>
-      <TopBar />
+    <div className="flex h-screen">
       <SideBar />
-
-      <section className='flex flex-1 h-full'>
-        <Outlet />
-      </section>
-
-      <BottomBar />
+      <div className="flex flex-col flex-1">
+        <TopBar />
+        <div className="flex-1 overflow-auto p-4">
+          <Outlet />
+        </div>
+        <BottomBar />
+      </div>
     </div>
   )
 }

@@ -4,7 +4,6 @@ import { Button } from '../ui/button';
 import useScrollTrigger from '@/hooks/useScrollTrigger';
 
 interface AboutProps {
-  sectionId: string;
   title: string;
   paragraphs: string[];
   buttonText?: string;
@@ -13,13 +12,13 @@ interface AboutProps {
   imageAlt?: string;
 }
 
-const About: React.FC<AboutProps> = ({ sectionId, title, paragraphs, buttonText, buttonLink, imageSrc, imageAlt }) => {
+const About: React.FC<AboutProps> = ({ title, paragraphs, buttonText, buttonLink, imageSrc, imageAlt }) => {
   const [isVisibleText, textRef] = useScrollTrigger();
   const [isVisibleImage, imageRef] = useScrollTrigger();
 
   return (
     <div>
-      <section id={sectionId} className="overflow-hidden pb-12 lg:pt-[90px] lg:pb-[90px] bg-dark-1">
+      <section id="about" className="overflow-hidden pb-12 lg:pt-[90px] lg:pb-[90px] bg-dark-1">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">

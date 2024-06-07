@@ -1,43 +1,33 @@
-
-
+import React from 'react';
 import useScrollTrigger from '@/hooks/useScrollTrigger';
 
+interface About2Props {
+  title: string;
+  paragraphs: string[];
+}
 
-const About2 = () => {
-
+const About2: React.FC<About2Props> = ({ title, paragraphs }) => {
   const [isVisibleText, textRef] = useScrollTrigger();
- 
+
   return (
     <div>
-      <section id='about2' className="overflow-hidden pb-12 lg:pt-[90px] lg:pb-[90px] bg-dark-1">
+      <section id='about' className="overflow-hidden pb-12 lg:pt-[90px] lg:pb-[90px] bg-dark-1">
         <div className="container mx-auto">
           <div ref={textRef} className={`flex flex-wrap items-center justify-center -mx-4
             ${isVisibleText ? 'animate__animated animate__fadeInUp' : 'opacity-0'}`}>
             
-            {/* Text section now on the left */}
             <div className="w-full px-4">
               <div className="font-garamond tracking-widest">
                 <h2 className="mb-5 text-3xl font-bold text-cream1 sm:text-[40px]/[48px]">
-                  All-inclusive Experience.
+                  {title}
                 </h2>
-                <p className="mb-5 text-base text-body-color dark:text-dark-6">
-                  We provide an all-inclusive dining experience that includes 
-                  three or four courses, priced at $85 or $100 per person respectively. 
-                  We do not provide linen, so you have the liberty of choosing your 
-                  preferred style.
-                </p>
-                <p className="mb-4 text-base text-body-color dark:text-dark-6">
-                  After the meal, we will leave your kitchen clean, 
-                  just how we found it.                
-                </p>
+                {paragraphs.map((paragraph, index) => (
+                  <p key={index} className="mb-5 text-base text-body-color dark:text-dark-6">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
-
-            {/* Images section now on the right */}
-            {/*<div className="w-full  lg:w-full md:pt-8">
-                <CarouselComp />
-  </div>*/}
-
 
           </div>
         </div>

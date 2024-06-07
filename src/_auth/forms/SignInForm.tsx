@@ -91,7 +91,7 @@ const SignInForm = () => {
             ) : "Sign In"}
           </Button>
           <p className="text-small-regular text-light-2 text-center mt-2">
-            Don't have an account yet? <Link to="/sign-up" className="text-primary text-primary-500 text-small-semibold ml-1">Sign up</Link>
+            New Admin? <Link to="/sign-up" className="text-primary text-primary-500 text-small-semibold ml-1">Create Profile</Link>
           </p>
         </form>
       </div>

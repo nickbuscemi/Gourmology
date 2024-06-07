@@ -1,35 +1,34 @@
+
+import { useParams } from 'react-router-dom';
 import ServiceContent1 from '@/components/shared/ServiceContent1';
 import ServiceContent2 from '@/components/shared/ServiceContent2';
-import { useParams } from 'react-router-dom';
-import { serviceData } from '../../../data/ServiceData'
-
+import { useSanityContent } from '../../../hooks/useSanityContent';
+import { SERVICE_PAGE_QUERY } from '../../../queries/sanityQueries';
 
 export const ServicePage = () => {
   const { serviceName } = useParams<{ serviceName?: string }>();
-
-  
 
   if (!serviceName) {
     return <div>Service not found</div>; // Fallback for undefined serviceName
   }
 
-  // Convert URL slug back to title format and find the corresponding service
   const pageTitle = serviceName.replace(/-/g, ' ');
-  const service = serviceData.find(service => service.title.toLowerCase() === pageTitle.toLowerCase());
+  console.log(pageTitle);
+  const { data: service, error, loading } = useSanityContent(SERVICE_PAGE_QUERY(pageTitle));
 
-  if (!service) {
-    return <div>Service not found</div>; // Fallback for no matching service
+  if (error) {
+    return <div>Failed to load content. Please try again later.</div>;
+  }
+
+  if (loading || !service) {
+    return <div>Coming Soon..</div>;
   }
 
   // Render the ServiceContent component with the data from the matched service
   return (
     <>
-    <ServiceContent1 {...service.content1} />
-    <ServiceContent2 {...service.content2} />
+      <ServiceContent1 {...service.content1} />
+      <ServiceContent2 {...service.content2} />
     </>
   );
 };
-
-
-
-

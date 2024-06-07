@@ -18,6 +18,7 @@ import SignUpForm from './_auth/forms/SignUpForm';
 
 import AdminLayout from './_admin/AdminLayout';
 import MainDash from './_admin/pages/MainDash';
+import AboutSections from './_admin/pages/AboutSections';
 
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
         
         {/* public admin routes */} 
         <Route element={<AdminLayout />}>
-                <Route path="/dash-main" element={<MainDash />} />
+                <Route path="/admin" element={<MainDash />} />
+                <Route path="/admin/about-sections" element={<AboutSections/>} />
         </Route>
         {/* public client routes */} 
         <Route element={<RootLayout />}>

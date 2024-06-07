@@ -155,7 +155,7 @@ export default function Hero2() {
               </div>
             </div>
             <div className='flex items-center justify-center pt-12'>
-            <Button className='text-cream1 bg-dark-1 tracking-widest rounded-lg font-garamond text-lg'>
+            <Button className='text-cream1 hover:bg-dark-3 hover:opacity-50 tracking-widest rounded-lg font-garamond text-lg'>
                   <Link to='/contact'>Book Today</Link>
             </Button>
           </div>
