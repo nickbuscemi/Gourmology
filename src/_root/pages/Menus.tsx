@@ -14,7 +14,7 @@ const Menus = () => {
   const tabsContentClass = 'text-center mt-3 text-lg font-garamond tracking-widest text-cream1';
   //const isLoaded = useScrollTrigger();
 
-  const holiday = '4th of July';
+  const holiday = 'Summer Menu';
 
   // fetch from sanity
   const { data: cateringMenuData, error: cateringError, loading: cateringLoading } = useSanityContent(MENU_QUERY('Catering'));
