@@ -49,9 +49,11 @@ const ServiceContent2 = ({
                                 <h2 className="mb-5 text-3xl font-bold text-cream1 sm:text-[40px]/[48px]">
                                     {title}
                                 </h2>
-                                <p className="mb-5 text-base text-body-color">
-                                    {description}
-                                </p>
+                                {description.map((paragraph, index) => (
+                                    <p key={index} className="mb-5 text-base text-body-color">
+                                        {paragraph}
+                                    </p>
+                                ))}
                             </div>
                         </div>
                     </div>

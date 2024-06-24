@@ -45,5 +45,21 @@ export const SERVICE_PAGE_QUERY = (serviceName: string) => `*[_type == "serviceP
       buttonLabel
     }
 }`;
+
+
+export const MENU_QUERY = (menuTitle: string) => `*[_type == "menu" && title == "${menuTitle}"]{
+  title,
+  images[]{
+    asset->{
+      _id,
+      url
+    }
+  }
+}`;
+
+
+
+
+
   // Add other queries here as needed
   

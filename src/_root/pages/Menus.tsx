@@ -3,6 +3,10 @@ import CateringMenu from "./Menus/CateringMenu";
 import HolidayMenu from "./Menus/HolidayMenu";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useSanityContent } from "../../hooks/useSanityContent";
+import { MENU_QUERY } from "../../queries/sanityQueries";
+
+
 
 //import useScrollTrigger from "@/hooks/useScrollTrigger";
 
@@ -13,6 +17,22 @@ const Menus = () => {
   //const isLoaded = useScrollTrigger();
 
   const holiday = 'Mother\'s Day';
+
+  // fetch from sanity
+  const { data: cateringMenuData, error: cateringError, loading: cateringLoading } = useSanityContent(MENU_QUERY('Catering'));
+  const { data: holidayMenuData, error: holidayError, loading: holidayLoading } = useSanityContent(MENU_QUERY(holiday));
+
+ // Display loading or error state if necessary
+ if (cateringLoading || holidayLoading) {
+  return <div>Loading...</div>;
+}
+
+if (cateringError || holidayError) {
+  return <div>{cateringError || holidayError}</div>;
+}
+
+  const cateringImages = cateringMenuData?.images?.map((image: any) => image.asset.url) || [];
+  const holidayImages = holidayMenuData?.images?.map((image: any) => image.asset.url) || [];
 
   return (
     <>
@@ -26,8 +46,8 @@ const Menus = () => {
           <div className="flex flex-col mt-3 animate__animated animate__fadeIn">
             <Tabs defaultValue={isActive} onValueChange={setIsActive} className="font-garamond tracking-widest text-cream1 text-2xl">
               <TabsList>
-                <TabsTrigger value="catering" onClick={() => setIsActive('catering')} className={isActive === 'catering' ? triggerClass : ''}>Catering</TabsTrigger>
-                <TabsTrigger value="holiday" onClick={() => setIsActive('holiday')} className={isActive === 'holiday' ? triggerClass : ''}>{holiday} Special</TabsTrigger>
+                <TabsTrigger value="catering" onClick={() => setIsActive('catering')} className={isActive === 'catering' ? triggerClass : ''}>{cateringMenuData.title}</TabsTrigger>
+                <TabsTrigger value="holiday" onClick={() => setIsActive('holiday')} className={isActive === 'holiday' ? triggerClass : ''}>{holidayMenuData.title}</TabsTrigger>
                 {/*<TabsTrigger value="weeklyspecials" onClick={() => setIsActive('weeklyspecials')} className={isActive === 'weeklyspecials' ? triggerClass : ''}>Weekly Specials</TabsTrigger>
                 <TabsTrigger value="mealprep" onClick={() => setIsActive('mealprep')} className={isActive === 'mealprep' ? triggerClass : ''}>Meal Prep</TabsTrigger>*/}
               </TabsList>
@@ -36,29 +56,15 @@ const Menus = () => {
                 <p className={tabsContentClass}>
                   Our perfectly curated menu packages for any event.
                 </p>
-                <CateringMenu />
+                <CateringMenu images={cateringImages} />
               </TabsContent>
 
               <TabsContent value="holiday">
                 <p className={tabsContentClass}>
                   Let us make {holiday} special this year.
                 </p>
-                <HolidayMenu />
+                <HolidayMenu images={holidayImages}/>
               </TabsContent>
-
-              {/*<TabsContent value="weeklyspecials">
-                <p className={tabsContentClass}>
-                  Check out our specials this week!
-                </p>
-                <h3 className="text-center text-5xl pt-20">Coming Soon...</h3>
-              </TabsContent>
-
-              <TabsContent value="mealprep">
-                <p className={tabsContentClass}>
-                  Save time and eat better with our meal prep services.
-                </p>
-                <h3 className="text-center text-5xl pt-20">Coming Soon...</h3>
-              </TabsContent>*/}
             </Tabs>
           </div>
         </div>

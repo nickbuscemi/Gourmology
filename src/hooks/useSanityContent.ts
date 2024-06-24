@@ -10,7 +10,7 @@ export function useSanityContent(query: string) {
     const fetchData = async () => {
       try {
         const result = await client.fetch(query);
-        setData(result[0]);
+        setData(result[0] || []);
       } catch (error) {
         console.error('Error fetching data:', error);
         setError('Failed to load content. Please try again later.');
