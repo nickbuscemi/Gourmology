@@ -6,8 +6,6 @@ import { useState } from "react";
 import { useSanityContent } from "../../hooks/useSanityContent";
 import { MENU_QUERY } from "../../queries/sanityQueries";
 
-
-
 //import useScrollTrigger from "@/hooks/useScrollTrigger";
 
 const Menus = () => {
@@ -22,14 +20,14 @@ const Menus = () => {
   const { data: cateringMenuData, error: cateringError, loading: cateringLoading } = useSanityContent(MENU_QUERY('Catering'));
   const { data: holidayMenuData, error: holidayError, loading: holidayLoading } = useSanityContent(MENU_QUERY(holiday));
 
- // Display loading or error state if necessary
- if (cateringLoading || holidayLoading) {
-  return <div>Loading...</div>;
-}
+  // Display loading or error state if necessary
+  if (cateringLoading || holidayLoading) {
+    return <div>Loading...</div>;
+  }
 
-if (cateringError || holidayError) {
-  return <div>{cateringError || holidayError}</div>;
-}
+  if (cateringError || holidayError) {
+    return <div>{cateringError || holidayError}</div>;
+  }
 
   const cateringImages = cateringMenuData?.images?.map((image: any) => image.asset.url) || [];
   const holidayImages = holidayMenuData?.images?.map((image: any) => image.asset.url) || [];
