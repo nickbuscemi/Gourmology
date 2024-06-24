@@ -9,7 +9,7 @@ import RootLayout from './_root/RootLayout';
 import { Home } from './_root';
 import { Services, Contact, Menus } from '../src/_root/index';
 import AboutUs from './_root/pages/AboutUs';
-import CateringMenu from './_root/pages/Menus/CateringMenu';
+//import CateringMenu from './_root/pages/Menus/CateringMenu';
 import { ServicePage } from './_root/pages/Services/ServicePage';
 import AuthLayout from './_auth/AuthLayout';
 import SignInForm from './_auth/forms/SignInForm';
@@ -52,7 +52,7 @@ function App() {
                 {/*<Route path="/gallery" element={<Gallery />} />*/}
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/menus" element={<Menus />} />
-                <Route path='/menus/catering-menu' element={<CateringMenu />} />
+                
                 <Route path="*" element={<div>404 Not Found</div>} />
             </Route>
       </Routes>
