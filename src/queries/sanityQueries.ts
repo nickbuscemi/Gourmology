@@ -1,3 +1,14 @@
+export const GENERIC_ABOUT_QUERY = (sectionType: string) => `*[_type == "aboutSection" && sectionType == "${sectionType}"] {
+  title,
+  paragraphs,
+  paragraph,
+  buttonText,
+  buttonLink,
+  "imageSrc": imageSrc.asset->url,
+  imageAlt
+}`;
+
+
 export const ABOUT3_QUERY = `*[_type == "about3Page"] {
     title, 
     paragraphs, 

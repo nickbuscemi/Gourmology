@@ -2,6 +2,8 @@ import About from "@/components/sections/About";
 import About3 from "@/components/sections/About3"
 import Hero3 from "@/components/shared/Hero3"
 import { cloudFlareImages } from "@/data/cloudFlareImagesConfig";
+//import { useSanityContent } from '../../hooks/useSanityContent';  
+//import { ABOUT_QUERY, ABOUT3_QUERY } from '../../queries/sanityQueries';
 
 
 const AboutUs = () => {
