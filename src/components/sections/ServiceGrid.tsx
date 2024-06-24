@@ -15,7 +15,7 @@ import privateChef from '../../../public/assets/icons/serviceIcons/privateChef.p
 import rentals from '../../../public/assets/icons/serviceIcons/rentals.png'
 import sitDown from '../../../public/assets/icons/serviceIcons/sitDown.png'
 
-import { serviceData } from "@/data/ServiceData";
+import { serviceData } from "@/data/ServiceData"; // replace with sanity query
 
 const icons: any = {
     "Private Chef Experience": privateChef,
@@ -47,21 +47,6 @@ export const ServiceGrid = () => {
           ))}
         </div>
       </div>
-      {/*<div className=" md:grid-cols-2 gap-24 hidden md:hidden lg:flex">
-            <div className="flex items-center">
-              <p className="-mt-8 text-3xl md:mt-0 md:text-4xl">
-                We all know that the secret to hosting a successful event
-                is inviting the right people and serving them incredible food.
-              </p>
-            </div>
-            <div className=" items-center md:border-l-2 md:border-gray-300 md:pr-12">
-              <p className="px-20 mt-3 text-2xl">
-              That’s why our team is so dedicated to working closely with you to create an 
-              unforgettable, distinguished experience that will not only enhance your event, 
-              but also keep your guests talking about it for years to come.
-              </p>
-            </div>
-        </div>*/}
           </div>
     </div>
   );

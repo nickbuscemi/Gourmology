@@ -14,11 +14,9 @@ const Menus = () => {
   const tabsContentClass = 'text-center mt-3 text-lg font-garamond tracking-widest text-cream1';
   //const isLoaded = useScrollTrigger();
 
-  const holiday = 'Summer Menu';
-
   // fetch from sanity
-  const { data: cateringMenuData, error: cateringError, loading: cateringLoading } = useSanityContent(MENU_QUERY('Catering'));
-  const { data: holidayMenuData, error: holidayError, loading: holidayLoading } = useSanityContent(MENU_QUERY(holiday));
+  const { data: cateringMenuData, error: cateringError, loading: cateringLoading } = useSanityContent(MENU_QUERY('catering'));
+  const { data: holidayMenuData, error: holidayError, loading: holidayLoading } = useSanityContent(MENU_QUERY('holiday'));
 
   // Display loading or error state if necessary
   if (cateringLoading || holidayLoading) {
@@ -59,7 +57,7 @@ const Menus = () => {
 
               <TabsContent value="holiday">
                 <p className={tabsContentClass}>
-                  Let us make {holiday} special this year.
+                  Our current seasonal menu.
                 </p>
                 <HolidayMenu images={holidayImages}/>
               </TabsContent>
