@@ -41,12 +41,11 @@ export const MENU_QUERY = (menuType: string) => {
   }`;
 };
 
-
-
-
-
-
-
-
-  // Add other queries here as needed
+export const SERVICE_GRID_QUERY = `*[_type == "serviceItems"]{
+  title,
+  content1 {
+    description
+  },
+  "iconUrl": icon.asset->url
+}`;
   

@@ -6,12 +6,28 @@ const h1 = "Our Services";
 const p = "Bringing people together for life's special moments.";
 const mediaType = 'video';
 const mediaSrc = video2;
+import { useSanityContentArray } from "@/hooks/useSanityContent";
+
+import { SERVICE_GRID_QUERY } from "@/queries/sanityQueries";
 
 export default function Services() {
+
+  const { data: serviceData, loading, error } = useSanityContentArray(SERVICE_GRID_QUERY);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
   return (
     <>
     <Hero3 h1={h1} p={p} mediaType={mediaType} mediaSrc={mediaSrc}/>
-    <ServiceGrid />
+    <ServiceGrid serviceData={serviceData}/> 
     </>
   );
 }
+
+
+// add props to service grid for snanity query
