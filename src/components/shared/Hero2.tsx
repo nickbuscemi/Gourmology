@@ -11,6 +11,7 @@ import { cloudFlareIcons } from '@/data/cloudFlareImagesConfig';
 import '../../App.css'
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
+import wordsLogoWhite from '../../../public/assets/images/logos/site-logo-words-white.png'
 
 export default function Hero2() {
   const videoRef = useRef<HTMLVideoElement>(null); 
@@ -141,7 +142,8 @@ export default function Hero2() {
               </div>
               <div className="mt-4 pb-2 md:pb-3 animate__animated animate__fadeIn animate__slower animate__delay-1s">
                 <img 
-                  src="https://akqmdqkuzjliggqqmlaj.supabase.co/storage/v1/object/public/Gourmology/logos/site-logo-words-white.png" 
+                  //src="https://akqmdqkuzjliggqqmlaj.supabase.co/storage/v1/object/public/Gourmology/logos/site-logo-words-white.png" 
+                  src={wordsLogoWhite}
                   alt="Gourmology" 
                   className="mx-auto"
                   width='full'

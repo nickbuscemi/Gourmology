@@ -1,9 +1,10 @@
-
 import { useParams } from 'react-router-dom';
 import ServiceContent1 from '@/components/shared/ServiceContent1';
 import ServiceContent2 from '@/components/shared/ServiceContent2';
 import { useSanityContent } from '../../../hooks/useSanityContent';
 import { SERVICE_PAGE_QUERY } from '../../../queries/sanityQueries';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 export const ServicePage = () => {
   const { serviceName } = useParams<{ serviceName?: string }>();
@@ -21,7 +22,11 @@ export const ServicePage = () => {
   }
 
   if (loading || !service) {
-    return <div>Coming Soon..</div>;
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
+        <CircularProgress />
+      </Box>
+    );
   }
 
   // Render the ServiceContent component with the data from the matched service

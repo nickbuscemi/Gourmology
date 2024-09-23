@@ -9,13 +9,19 @@ const mediaSrc = video2;
 import { useSanityContentArray } from "@/hooks/useSanityContent";
 
 import { SERVICE_GRID_QUERY } from "@/queries/sanityQueries";
+import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function Services() {
 
   const { data: serviceData, loading, error } = useSanityContentArray(SERVICE_GRID_QUERY);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
+        <CircularProgress />
+      </Box>
+    );
   }
 
   if (error) {

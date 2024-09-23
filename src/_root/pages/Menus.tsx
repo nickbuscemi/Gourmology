@@ -5,6 +5,10 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useSanityContent } from "../../hooks/useSanityContent";
 import { MENU_QUERY } from "../../queries/sanityQueries";
+import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
+
+
 
 //import useScrollTrigger from "@/hooks/useScrollTrigger";
 
@@ -20,7 +24,11 @@ const Menus = () => {
 
   // Display loading or error state if necessary
   if (cateringLoading || holidayLoading) {
-    return <div>Loading...</div>;
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
+        <CircularProgress />
+      </Box>
+    );
   }
 
   if (cateringError || holidayError) {
