@@ -16,6 +16,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+//import { Import } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(1, { message: "Please enter your name" }),
@@ -39,11 +40,14 @@ export const ContactForm = () => {
     },
   });
 
+  const HEROKU_URL = import.meta.env.VITE_HEROKU_URL || 'http://localhost:5001';
+
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
 
     console.log("values", values);
     try {
-      const response = await fetch('http://localhost:5001/api/contact', {
+      const response = await fetch(`${HEROKU_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
