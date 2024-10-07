@@ -42,7 +42,7 @@ export const ContactForm = () => {
 
   const HEROKU_URL = import.meta.env.VITE_HEROKU_URL || 'http://localhost:5001';
 
-
+  console.log("HEROKU_URL", HEROKU_URL);
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
 
     console.log("values", values);
