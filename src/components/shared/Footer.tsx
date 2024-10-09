@@ -53,14 +53,16 @@ const Footer = () => {
                       <img src={instagram} alt="Instagram" className="w-6 h-6 cursor-pointer" />
                     </span>
                     </Link>
+                    <a href="mailto:gourmology18@gmail.com">
                     <span>
                       <img src={email} alt="Email" className="w-6 h-6 cursor-pointer" />
                     </span>
+                    </a>
+                    <a href="tel:+19176278597">
                     <span>
-                      <a href="tel:+13474537738">
-                        <img src={phone} alt="Phone" className="w-6 h-6 cursor-pointer" />
-                      </a>
+                      <img src={phone} alt="Phone" className="w-6 h-6 cursor-pointer" />
                     </span>
+                    </a>
                     <Link to='https://www.facebook.com/Gourmology/'>
                     <span>
                       <img src={facebook} alt="Facebook" className="w-6 h-6 cursor-pointer" />
