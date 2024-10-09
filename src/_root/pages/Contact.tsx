@@ -28,9 +28,9 @@ const Contact = () => {
               <h3 className="md:text-4xl text-3xl font-semibold pb-4">Contact Information</h3>
               <div className="space-y-3 md:text-2xl">
                 <a href="tel:+13474537738">
-                  <p><strong>Phone:</strong> (347) 453-7738</p>
+                  <p><strong>Phone:</strong> (917) 627-8597</p>
                 </a>
-                <p><strong>Email:</strong> contact@example.com</p>
+                <p><strong>Email:</strong> gourmology18@gmail.com</p>
                 <div className="flex items-center">
                     <span>Follow us on:</span>
                     <div className="flex items-center ml-2 gap-4">
