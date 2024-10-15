@@ -93,7 +93,7 @@ export function Footer2() {
             </div>
           </div>
 
-          <div className="flex gap-8 sm:mt-4 mb-6 sm:grid-cols-3">
+          {/*<div className="flex gap-8 sm:mt-4 mb-6 sm:grid-cols-3">
             <div>
               <Footer.Title title="about" />
               <Footer.LinkGroup col>
@@ -108,7 +108,7 @@ export function Footer2() {
                 <Footer.Link href="#">Instagram</Footer.Link>
               </Footer.LinkGroup>
             </div>
-          </div>
+          </div>*/}
         </div>
         <Footer.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between px-8">
@@ -125,7 +125,9 @@ export function Footer2() {
               </span>
             </Link>
             <span>
-              <img src={cloudFlareIcons.email} alt="Email" className="w-6 h-6 cursor-pointer" />
+              <Link to='mailto:gourmology18@gmail.com'>
+                <img src={cloudFlareIcons.email} alt="Email" className="w-6 h-6 cursor-pointer" />
+              </Link>
             </span>
             <span>
               <a href="tel:+13474537738">
