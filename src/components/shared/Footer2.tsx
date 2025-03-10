@@ -113,7 +113,7 @@ export function Footer2() {
         <Footer.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between px-8">
           <div className='flex gap-6'>
-            <Footer.Copyright href="#" by="Gourmology, LLC" year={2024} />
+            <Footer.Copyright href="#" by="Gourmology, LLC" year={2025} />
             <Link to='https://gourmology.sanity.studio/structure'>
               <p className='text-light-2 hover:underline'>Admin</p>
             </Link>

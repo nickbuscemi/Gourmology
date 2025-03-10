@@ -87,7 +87,7 @@ const Footer = () => {
             {/* <!-- Copyright section --> */}
             <div
                 className="pt-4 pb-8 text-center font-garamond text-cream1">
-                © 2024 Copyright: Gourmology, LLC
+                © 2025 Copyright: Gourmology, LLC
             </div>
     </footer>
 );
