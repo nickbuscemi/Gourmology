@@ -28,9 +28,10 @@ const Contact = () => {
               <h3 className="md:text-4xl text-3xl font-semibold pb-4">Contact Information</h3>
               <div className="space-y-3 md:text-2xl">
                 <a href="tel:+13474537738">
-                  <p><strong>Phone:</strong> (917) 627-8597</p>
+                  <p><strong>Phone:</strong> (516) 882-4266</p>
                 </a>
                 <p><strong>Email:</strong> gourmology18@gmail.com</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=429+Sunrise+Hwy,+Lynbrook,+NY+11563">429 Sunrise Hwy, Lynbrook, NY 11563</a></p>
                 <div className="flex items-center">
                     <span>Follow us on:</span>
                     <div className="flex items-center ml-2 gap-4">

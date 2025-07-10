@@ -156,9 +156,14 @@ export default function Hero2() {
                 </p>
               </div>
             </div>
-            <div className='flex items-center justify-center pt-12'>
+            {/*<div className='flex items-center justify-center pt-12'>
             <Button className='text-cream1 hover:bg-dark-3 hover:opacity-50 tracking-widest rounded-lg font-garamond text-lg'>
                   <Link to='/contact'>Book Today</Link>
+            </Button>
+          </div>*/}
+          <div className='flex items-center justify-center pt-12'>
+            <Button className='text-cream1 hover:bg-dark-3 hover:opacity-50 tracking-widest rounded-lg font-garamond text-lg'>
+                  <Link to='https://www.clover.com/online-ordering/gourmology-lynbrook'>Order Now</Link>
             </Button>
           </div>
           </div>
