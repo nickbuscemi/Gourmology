@@ -4,8 +4,7 @@ import instagram from '../../../public/assets/icons/instagram.svg'
 import facebook from '../../../public/assets/icons/facebook.svg'
 import { Link } from "react-router-dom"
 
-// Define the form component
-const Contact = () => {
+const StorefrontContact = () => {
 
   return (
     <>
@@ -52,4 +51,4 @@ const Contact = () => {
   )
 };
 
-export default Contact;
+export default StorefrontContact;

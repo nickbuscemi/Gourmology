@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import CateringMenu from "./Menus/CateringMenu";
-import HolidayMenu from "./Menus/HolidayMenu";
+import CateringMenu from "../../_root/pages/Menus/CateringMenu";
+import HolidayMenu from "../../_root/pages/Menus/HolidayMenu";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useSanityContent } from "../../hooks/useSanityContent";
@@ -8,21 +8,14 @@ import { MENU_QUERY } from "../../queries/sanityQueries";
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
 
-
-
-//import useScrollTrigger from "@/hooks/useScrollTrigger";
-
-const Menus = () => {
+const StorefrontMenus = () => {
   const [isActive, setIsActive] = useState('catering');
   const triggerClass = 'md:text-xl font-bold text-white';
   const tabsContentClass = 'text-center mt-3 text-lg font-garamond tracking-widest text-cream1';
-  //const isLoaded = useScrollTrigger();
 
-  // fetch from sanity
   const { data: cateringMenuData, error: cateringError, loading: cateringLoading } = useSanityContent(MENU_QUERY('catering'));
   const { data: holidayMenuData, error: holidayError, loading: holidayLoading } = useSanityContent(MENU_QUERY('holiday'));
 
-  // Display loading or error state if necessary
   if (cateringLoading || holidayLoading) {
     return (
       <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
@@ -52,8 +45,6 @@ const Menus = () => {
               <TabsList>
                 <TabsTrigger value="catering" onClick={() => setIsActive('catering')} className={isActive === 'catering' ? triggerClass : ''}>{cateringMenuData.title}</TabsTrigger>
                 <TabsTrigger value="holiday" onClick={() => setIsActive('holiday')} className={isActive === 'holiday' ? triggerClass : ''}>{holidayMenuData.title}</TabsTrigger>
-                {/*<TabsTrigger value="weeklyspecials" onClick={() => setIsActive('weeklyspecials')} className={isActive === 'weeklyspecials' ? triggerClass : ''}>Weekly Specials</TabsTrigger>
-                <TabsTrigger value="mealprep" onClick={() => setIsActive('mealprep')} className={isActive === 'mealprep' ? triggerClass : ''}>Meal Prep</TabsTrigger>*/}
               </TabsList>
 
               <TabsContent value="catering">
@@ -97,4 +88,4 @@ const Menus = () => {
   );
 }
 
-export default Menus;
+export default StorefrontMenus;

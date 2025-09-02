@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';  
 import { NavigationMenuDemo } from '../demos/NavigationMenuDemo';
-import { cloudFlareLogos } from '@/data/cloudFlareImagesConfig'
+import { cloudFlareLogos } from '@/data/cloudFlareImagesConfig';
+import SiteModeToggle from './SiteModeToggle';
 
 const TopNavbar = () => {
   return (
@@ -14,7 +15,10 @@ const TopNavbar = () => {
                     height={165}
                 />
             </Link>
-            <NavigationMenuDemo />
+            <div className="flex items-center gap-6">
+                <SiteModeToggle />
+                <NavigationMenuDemo />
+            </div>
         </div>
     </section>
   )

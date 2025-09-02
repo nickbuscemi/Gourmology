@@ -92,8 +92,22 @@ export function Footer2() {
             </div>
           </div>
 
-          {/* Contact Info - Centered on mobile, right-aligned container on large, left-aligned text */}
-<div className="flex flex-col text-cream1 font-garamond tracking-widest lg:w-1/2 w-full order-2 items-center lg:items-end text-left">
+          {/* Store Hours & Contact Info - Centered on mobile, right-aligned container on large, left-aligned text */}
+<div className="flex flex-col lg:flex-row text-cream1 font-garamond tracking-widest lg:w-1/2 w-full order-2 items-center lg:items-end text-left gap-8">
+  
+  {/* Store Hours */}
+  <div className="space-y-3 text-lg">
+    <p><strong>Store Hours:</strong></p>
+    <div className="text-base space-y-1">
+      <p>Tuesday - Saturday</p>
+      <p>11 AM - 7 PM</p>
+      <p>Sunday</p>
+      <p>12 PM - 6 PM</p>
+      <p><em>Closed Mondays</em></p>
+    </div>
+  </div>
+
+  {/* Contact Info */}
   <div className="space-y-3 text-lg">
     <p>
       <strong>Phone:</strong>{" "}
