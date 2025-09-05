@@ -99,11 +99,11 @@ export function Footer2() {
   <div className="space-y-3 text-lg">
     <p><strong>Store Hours:</strong></p>
     <div className="text-base space-y-1">
-      <p>Tuesday - Saturday</p>
-      <p>11 AM - 7 PM</p>
-      <p>Sunday</p>
-      <p>12 PM - 6 PM</p>
       <p><em>Closed Mondays</em></p>
+      <p>Tue - Thu: 10 AM - 7 PM</p>
+      <p>Friday: 10 AM - 9 PM</p>
+      <p>Saturday: 11 AM - 9 PM</p>
+      <p>Sunday: 11 AM - 6 PM</p>
     </div>
   </div>
 

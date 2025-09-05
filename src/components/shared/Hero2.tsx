@@ -10,13 +10,14 @@ import video1gif from '../../../public/videos/site-videos/video1gif.gif'
 import { cloudFlareIcons } from '@/data/cloudFlareImagesConfig';
 import '../../App.css'
 import { Button } from '../ui/button';
-import { Link } from 'react-router-dom';
 import wordsLogoWhite from '../../../public/assets/images/logos/site-logo-words-white.png'
+import DeliveryModal from './DeliveryModal';
 
 export default function Hero2() {
   const videoRef = useRef<HTMLVideoElement>(null); 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [opacity, setOpacity] = useState(1); 
+  const [opacity, setOpacity] = useState(1);
+  const [isModalOpen, setIsModalOpen] = useState(false); 
 
 
   useEffect(() => {
@@ -162,8 +163,11 @@ export default function Hero2() {
             </Button>
           </div>*/}
           <div className='flex items-center justify-center pt-12'>
-            <Button className='text-cream1 hover:bg-dark-3 hover:opacity-50 tracking-widest rounded-lg font-garamond text-lg'>
-                  <Link to='https://www.clover.com/online-ordering/gourmology-lynbrook'>Order Now</Link>
+            <Button 
+              onClick={() => setIsModalOpen(true)}
+              className='text-cream1 hover:bg-dark-3 hover:opacity-50 tracking-widest rounded-lg font-garamond text-lg'
+            >
+              Order Now
             </Button>
           </div>
           </div>
@@ -184,6 +188,11 @@ export default function Hero2() {
         </div>
         </div>
       </div>
+      
+      <DeliveryModal 
+        open={isModalOpen}
+        onOpenChange={setIsModalOpen}
+      />
     </>
   );
 }
